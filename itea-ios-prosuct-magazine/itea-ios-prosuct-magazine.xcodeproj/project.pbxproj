@@ -8,19 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		8645A7CD226E3BAD00BCF038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8645A7CC226E3BAD00BCF038 /* AppDelegate.swift */; };
-		8645A7CF226E3BAD00BCF038 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8645A7CE226E3BAD00BCF038 /* ViewController.swift */; };
 		8645A7D1226E3BAE00BCF038 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8645A7D0226E3BAE00BCF038 /* Assets.xcassets */; };
-		8645A7D4226E3BAE00BCF038 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8645A7D2226E3BAE00BCF038 /* Main.storyboard */; };
+		8645A7DF226E484B00BCF038 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8645A7DE226E484B00BCF038 /* LoginViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8645A7C9226E3BAD00BCF038 /* itea-ios-prosuct-magazine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "itea-ios-prosuct-magazine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8645A7CC226E3BAD00BCF038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8645A7CE226E3BAD00BCF038 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8645A7D0226E3BAE00BCF038 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8645A7D3226E3BAE00BCF038 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8645A7D5226E3BAE00BCF038 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8645A7D6226E3BAE00BCF038 /* itea_ios_prosuct_magazine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = itea_ios_prosuct_magazine.entitlements; sourceTree = "<group>"; };
+		8645A7DE226E484B00BCF038 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,11 +52,10 @@
 			isa = PBXGroup;
 			children = (
 				8645A7CC226E3BAD00BCF038 /* AppDelegate.swift */,
-				8645A7CE226E3BAD00BCF038 /* ViewController.swift */,
 				8645A7D0226E3BAE00BCF038 /* Assets.xcassets */,
-				8645A7D2226E3BAE00BCF038 /* Main.storyboard */,
 				8645A7D5226E3BAE00BCF038 /* Info.plist */,
 				8645A7D6226E3BAE00BCF038 /* itea_ios_prosuct_magazine.entitlements */,
+				8645A7DE226E484B00BCF038 /* LoginViewController.storyboard */,
 			);
 			path = "itea-ios-prosuct-magazine";
 			sourceTree = "<group>";
@@ -122,7 +119,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8645A7D1226E3BAE00BCF038 /* Assets.xcassets in Resources */,
-				8645A7D4226E3BAE00BCF038 /* Main.storyboard in Resources */,
+				8645A7DF226E484B00BCF038 /* LoginViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,23 +130,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8645A7CF226E3BAD00BCF038 /* ViewController.swift in Sources */,
 				8645A7CD226E3BAD00BCF038 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		8645A7D2226E3BAE00BCF038 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8645A7D3226E3BAE00BCF038 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8645A7D7226E3BAE00BCF038 /* Debug */ = {
