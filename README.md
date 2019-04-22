@@ -1,0 +1,1 @@
+itea-ios-product-magazine
