@@ -7,22 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8645A7CD226E3BAD00BCF038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8645A7CC226E3BAD00BCF038 /* AppDelegate.swift */; };
-		8645A7D1226E3BAE00BCF038 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8645A7D0226E3BAE00BCF038 /* Assets.xcassets */; };
-		8645A7DF226E484B00BCF038 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8645A7DE226E484B00BCF038 /* LoginViewController.storyboard */; };
+		8645A7ED226E497D00BCF038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8645A7EC226E497D00BCF038 /* AppDelegate.swift */; };
+		8645A7EF226E497D00BCF038 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8645A7EE226E497D00BCF038 /* ViewController.swift */; };
+		8645A7F2226E497D00BCF038 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8645A7F0226E497D00BCF038 /* Main.storyboard */; };
+		8645A7F4226E497F00BCF038 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8645A7F3226E497F00BCF038 /* Assets.xcassets */; };
+		8645A7F7226E497F00BCF038 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8645A7F5226E497F00BCF038 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8645A7C9226E3BAD00BCF038 /* itea-ios-prosuct-magazine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "itea-ios-prosuct-magazine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8645A7CC226E3BAD00BCF038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8645A7D0226E3BAE00BCF038 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8645A7D5226E3BAE00BCF038 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8645A7D6226E3BAE00BCF038 /* itea_ios_prosuct_magazine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = itea_ios_prosuct_magazine.entitlements; sourceTree = "<group>"; };
-		8645A7DE226E484B00BCF038 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
+		8645A7E9226E497D00BCF038 /* itea-ios-products-magazine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "itea-ios-products-magazine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8645A7EC226E497D00BCF038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8645A7EE226E497D00BCF038 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8645A7F1226E497D00BCF038 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8645A7F3226E497F00BCF038 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8645A7F6226E497F00BCF038 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8645A7F8226E497F00BCF038 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8645A7C6226E3BAD00BCF038 /* Frameworks */ = {
+		8645A7E6226E497D00BCF038 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -32,70 +35,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8645A7C0226E3BAD00BCF038 = {
+		8645A7E0226E497D00BCF038 = {
 			isa = PBXGroup;
 			children = (
-				8645A7CB226E3BAD00BCF038 /* itea-ios-prosuct-magazine */,
-				8645A7CA226E3BAD00BCF038 /* Products */,
+				8645A7EB226E497D00BCF038 /* itea-ios-products-magazine */,
+				8645A7EA226E497D00BCF038 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		8645A7CA226E3BAD00BCF038 /* Products */ = {
+		8645A7EA226E497D00BCF038 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8645A7C9226E3BAD00BCF038 /* itea-ios-prosuct-magazine.app */,
+				8645A7E9226E497D00BCF038 /* itea-ios-products-magazine.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8645A7CB226E3BAD00BCF038 /* itea-ios-prosuct-magazine */ = {
+		8645A7EB226E497D00BCF038 /* itea-ios-products-magazine */ = {
 			isa = PBXGroup;
 			children = (
-				8645A7CC226E3BAD00BCF038 /* AppDelegate.swift */,
-				8645A7D0226E3BAE00BCF038 /* Assets.xcassets */,
-				8645A7D5226E3BAE00BCF038 /* Info.plist */,
-				8645A7D6226E3BAE00BCF038 /* itea_ios_prosuct_magazine.entitlements */,
-				8645A7DE226E484B00BCF038 /* LoginViewController.storyboard */,
+				8645A7EC226E497D00BCF038 /* AppDelegate.swift */,
+				8645A7EE226E497D00BCF038 /* ViewController.swift */,
+				8645A7F0226E497D00BCF038 /* Main.storyboard */,
+				8645A7F3226E497F00BCF038 /* Assets.xcassets */,
+				8645A7F5226E497F00BCF038 /* LaunchScreen.storyboard */,
+				8645A7F8226E497F00BCF038 /* Info.plist */,
 			);
-			path = "itea-ios-prosuct-magazine";
+			path = "itea-ios-products-magazine";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8645A7C8226E3BAD00BCF038 /* itea-ios-prosuct-magazine */ = {
+		8645A7E8226E497D00BCF038 /* itea-ios-products-magazine */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8645A7D9226E3BAE00BCF038 /* Build configuration list for PBXNativeTarget "itea-ios-prosuct-magazine" */;
+			buildConfigurationList = 8645A7FB226E497F00BCF038 /* Build configuration list for PBXNativeTarget "itea-ios-products-magazine" */;
 			buildPhases = (
-				8645A7C5226E3BAD00BCF038 /* Sources */,
-				8645A7C6226E3BAD00BCF038 /* Frameworks */,
-				8645A7C7226E3BAD00BCF038 /* Resources */,
+				8645A7E5226E497D00BCF038 /* Sources */,
+				8645A7E6226E497D00BCF038 /* Frameworks */,
+				8645A7E7226E497D00BCF038 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "itea-ios-prosuct-magazine";
-			productName = "itea-ios-prosuct-magazine";
-			productReference = 8645A7C9226E3BAD00BCF038 /* itea-ios-prosuct-magazine.app */;
+			name = "itea-ios-products-magazine";
+			productName = "itea-ios-products-magazine";
+			productReference = 8645A7E9226E497D00BCF038 /* itea-ios-products-magazine.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		8645A7C1226E3BAD00BCF038 /* Project object */ = {
+		8645A7E1226E497D00BCF038 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = G9;
 				TargetAttributes = {
-					8645A7C8226E3BAD00BCF038 = {
+					8645A7E8226E497D00BCF038 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 8645A7C4226E3BAD00BCF038 /* Build configuration list for PBXProject "itea-ios-prosuct-magazine" */;
+			buildConfigurationList = 8645A7E4226E497D00BCF038 /* Build configuration list for PBXProject "itea-ios-products-magazine" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -103,41 +107,62 @@
 				en,
 				Base,
 			);
-			mainGroup = 8645A7C0226E3BAD00BCF038;
-			productRefGroup = 8645A7CA226E3BAD00BCF038 /* Products */;
+			mainGroup = 8645A7E0226E497D00BCF038;
+			productRefGroup = 8645A7EA226E497D00BCF038 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8645A7C8226E3BAD00BCF038 /* itea-ios-prosuct-magazine */,
+				8645A7E8226E497D00BCF038 /* itea-ios-products-magazine */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8645A7C7226E3BAD00BCF038 /* Resources */ = {
+		8645A7E7226E497D00BCF038 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8645A7D1226E3BAE00BCF038 /* Assets.xcassets in Resources */,
-				8645A7DF226E484B00BCF038 /* LoginViewController.storyboard in Resources */,
+				8645A7F7226E497F00BCF038 /* LaunchScreen.storyboard in Resources */,
+				8645A7F4226E497F00BCF038 /* Assets.xcassets in Resources */,
+				8645A7F2226E497D00BCF038 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8645A7C5226E3BAD00BCF038 /* Sources */ = {
+		8645A7E5226E497D00BCF038 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8645A7CD226E3BAD00BCF038 /* AppDelegate.swift in Sources */,
+				8645A7EF226E497D00BCF038 /* ViewController.swift in Sources */,
+				8645A7ED226E497D00BCF038 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		8645A7F0226E497D00BCF038 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8645A7F1226E497D00BCF038 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8645A7F5226E497F00BCF038 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8645A7F6226E497F00BCF038 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		8645A7D7226E3BAE00BCF038 /* Debug */ = {
+		8645A7F9226E497F00BCF038 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -169,7 +194,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -188,17 +213,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		8645A7D8226E3BAE00BCF038 /* Release */ = {
+		8645A7FA226E497F00BCF038 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -230,7 +255,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -243,73 +268,72 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		8645A7DA226E3BAE00BCF038 /* Debug */ = {
+		8645A7FC226E497F00BCF038 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "itea-ios-prosuct-magazine/itea_ios_prosuct_magazine.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "itea-ios-prosuct-magazine/Info.plist";
+				INFOPLIST_FILE = "itea-ios-products-magazine/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Foton.G9.itea-ios-prosuct-magazine";
+				PRODUCT_BUNDLE_IDENTIFIER = "Foton.G9.itea-ios-products-magazine";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		8645A7DB226E3BAE00BCF038 /* Release */ = {
+		8645A7FD226E497F00BCF038 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "itea-ios-prosuct-magazine/itea_ios_prosuct_magazine.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "itea-ios-prosuct-magazine/Info.plist";
+				INFOPLIST_FILE = "itea-ios-products-magazine/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Foton.G9.itea-ios-prosuct-magazine";
+				PRODUCT_BUNDLE_IDENTIFIER = "Foton.G9.itea-ios-products-magazine";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8645A7C4226E3BAD00BCF038 /* Build configuration list for PBXProject "itea-ios-prosuct-magazine" */ = {
+		8645A7E4226E497D00BCF038 /* Build configuration list for PBXProject "itea-ios-products-magazine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8645A7D7226E3BAE00BCF038 /* Debug */,
-				8645A7D8226E3BAE00BCF038 /* Release */,
+				8645A7F9226E497F00BCF038 /* Debug */,
+				8645A7FA226E497F00BCF038 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8645A7D9226E3BAE00BCF038 /* Build configuration list for PBXNativeTarget "itea-ios-prosuct-magazine" */ = {
+		8645A7FB226E497F00BCF038 /* Build configuration list for PBXNativeTarget "itea-ios-products-magazine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8645A7DA226E3BAE00BCF038 /* Debug */,
-				8645A7DB226E3BAE00BCF038 /* Release */,
+				8645A7FC226E497F00BCF038 /* Debug */,
+				8645A7FD226E497F00BCF038 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 8645A7C1226E3BAD00BCF038 /* Project object */;
+	rootObject = 8645A7E1226E497D00BCF038 /* Project object */;
 }
