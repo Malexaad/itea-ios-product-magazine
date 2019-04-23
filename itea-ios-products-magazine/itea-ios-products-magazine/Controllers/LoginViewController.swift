@@ -8,7 +8,20 @@
 import Foundation
 import UIKit
 import SwiftGifOrigin
-class LoginViewController: UIViewController {
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet var usernameTextField: UITextField!
@@ -16,12 +29,21 @@ class LoginViewController: UIViewController {
     @IBOutlet var buttonView: UIButton!
     @IBOutlet var barView: UIView!
     @IBOutlet var enterLabel: UILabel!
+    @IBOutlet var loginView: UIView!
     
     var loginPassDict = LoginDictManager().GetLogPassDict()
     var userInfo : UserInfoModel?
     override func viewDidLoad() {
         super.viewDidLoad()
         FrameInit()
+        self.hideKeyboardWhenTappedAround()
+        passwordTextField.delegate = self
+        usernameTextField.delegate = self
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     func FrameInit() {
@@ -30,8 +52,6 @@ class LoginViewController: UIViewController {
         buttonView.backgroundColor = UIColor(red:0.81, green:0.32, blue:0.17, alpha:1.0)
         barView.backgroundColor = UIColor(red:0.81, green:0.32, blue:0.17, alpha:1.0)
         enterLabel.textColor = UIColor(red:0.81, green:0.32, blue:0.17, alpha:1.0)
-        
-        
     }
     
     func CheckLoginPass(username : String, password : String) -> Bool {

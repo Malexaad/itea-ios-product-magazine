@@ -59,7 +59,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardAppearance="light" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gd2-aM-W4U">
                                 <rect key="frame" x="119" y="487" width="166" height="44"/>
@@ -123,6 +123,7 @@
                         <outlet property="barView" destination="Pch-Vi-5UV" id="Uu5-eV-zXS"/>
                         <outlet property="buttonView" destination="gd2-aM-W4U" id="ctx-JZ-OvQ"/>
                         <outlet property="enterLabel" destination="2Q8-9V-pqS" id="rDg-B9-cDK"/>
+                        <outlet property="loginView" destination="H09-pC-Wjv" id="C4Z-yv-RkH"/>
                         <outlet property="passwordTextField" destination="iYA-PK-avP" id="pcj-WV-Wsi"/>
                         <outlet property="usernameTextField" destination="vVx-wC-TKv" id="Yhz-L9-ta4"/>
                     </connections>
