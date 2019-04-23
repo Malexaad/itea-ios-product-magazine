@@ -48,10 +48,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func FrameInit() {
         buttonView.clipsToBounds = true
+        buttonView.translatesAutoresizingMaskIntoConstraints = false
         buttonView.layer.cornerRadius = 25
         buttonView.backgroundColor = UIColor(red:0.81, green:0.32, blue:0.17, alpha:1.0)
+        buttonView.titleLabel?.font = enterLabel.font.withSize(self.view.frame.width / 10 - 2)
         barView.backgroundColor = UIColor(red:0.81, green:0.32, blue:0.17, alpha:1.0)
+        enterLabel.font = enterLabel.font.withSize(self.view.frame.width / 10 - 2)
         enterLabel.textColor = UIColor(red:0.81, green:0.32, blue:0.17, alpha:1.0)
+        
     }
     
     func CheckLoginPass(username : String, password : String) -> Bool {
