@@ -14,6 +14,8 @@ class LoginViewController: UIViewController {
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var buttonView: UIButton!
+    @IBOutlet var barView: UIView!
+    @IBOutlet var enterLabel: UILabel!
     
     var loginPassDict = LoginDictManager().GetLogPassDict()
     var userInfo : UserInfoModel?
@@ -25,6 +27,11 @@ class LoginViewController: UIViewController {
     func FrameInit() {
         buttonView.clipsToBounds = true
         buttonView.layer.cornerRadius = 25
+        buttonView.backgroundColor = UIColor(red:0.81, green:0.32, blue:0.17, alpha:1.0)
+        barView.backgroundColor = UIColor(red:0.81, green:0.32, blue:0.17, alpha:1.0)
+        enterLabel.textColor = UIColor(red:0.81, green:0.32, blue:0.17, alpha:1.0)
+        
+        
     }
     
     func CheckLoginPass(username : String, password : String) -> Bool {
@@ -79,6 +86,10 @@ class LoginViewController: UIViewController {
         else {
             Alert(errorCode: 4)
         }
+    }
+    
+    @IBAction func showPasswordButton(_ sender: Any) {
+        passwordTextField.isSecureTextEntry.toggle()
     }
     
 }
