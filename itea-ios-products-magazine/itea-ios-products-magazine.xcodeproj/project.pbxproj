@@ -15,6 +15,8 @@
 		8645A808226E5D6D00BCF038 /* UsersDictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8645A807226E5D6D00BCF038 /* UsersDictModel.swift */; };
 		8645A80B226EE80600BCF038 /* LoginsDictManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8645A80A226EE80600BCF038 /* LoginsDictManager.swift */; };
 		8645A812226F06B400BCF038 /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8645A811226F06B400BCF038 /* UserInfoModel.swift */; };
+		8645A81D226F13EC00BCF038 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8645A81C226F13EC00BCF038 /* LaunchView.swift */; };
+		F1CDBBE3C5A67A36BFD94F44 /* Pods_itea_ios_products_magazine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA19BB1F514E28C917FEC308 /* Pods_itea_ios_products_magazine.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,10 @@
 		8645A807226E5D6D00BCF038 /* UsersDictModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDictModel.swift; sourceTree = "<group>"; };
 		8645A80A226EE80600BCF038 /* LoginsDictManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginsDictManager.swift; sourceTree = "<group>"; };
 		8645A811226F06B400BCF038 /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
+		8645A81C226F13EC00BCF038 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		CA19BB1F514E28C917FEC308 /* Pods_itea_ios_products_magazine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itea_ios_products_magazine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA8920B4B2A565131614A6C7 /* Pods-itea-ios-products-magazine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itea-ios-products-magazine.debug.xcconfig"; path = "Target Support Files/Pods-itea-ios-products-magazine/Pods-itea-ios-products-magazine.debug.xcconfig"; sourceTree = "<group>"; };
+		EB0085F57E291195388222E9 /* Pods-itea-ios-products-magazine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itea-ios-products-magazine.release.xcconfig"; path = "Target Support Files/Pods-itea-ios-products-magazine/Pods-itea-ios-products-magazine.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1CDBBE3C5A67A36BFD94F44 /* Pods_itea_ios_products_magazine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6192DAD537A696DA19AEEAD0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA8920B4B2A565131614A6C7 /* Pods-itea-ios-products-magazine.debug.xcconfig */,
+				EB0085F57E291195388222E9 /* Pods-itea-ios-products-magazine.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		812EB1AE4313F120ABCA93F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA19BB1F514E28C917FEC308 /* Pods_itea_ios_products_magazine.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8645A7E0226E497D00BCF038 = {
 			isa = PBXGroup;
 			children = (
 				8645A7EB226E497D00BCF038 /* itea-ios-products-magazine */,
 				8645A7EA226E497D00BCF038 /* Products */,
+				6192DAD537A696DA19AEEAD0 /* Pods */,
+				812EB1AE4313F120ABCA93F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +86,7 @@
 		8645A7EB226E497D00BCF038 /* itea-ios-products-magazine */ = {
 			isa = PBXGroup;
 			children = (
+				8645A817226F0DD800BCF038 /* View */,
 				8645A809226EE7EE00BCF038 /* Managers */,
 				8645A804226E5D2700BCF038 /* Models */,
 				8645A803226E5D1D00BCF038 /* Controllers */,
@@ -105,6 +132,14 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		8645A817226F0DD800BCF038 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8645A81C226F13EC00BCF038 /* LaunchView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -112,9 +147,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8645A7FB226E497F00BCF038 /* Build configuration list for PBXNativeTarget "itea-ios-products-magazine" */;
 			buildPhases = (
+				547E7C27A2CF6383D6FCC84F /* [CP] Check Pods Manifest.lock */,
 				8645A7E5226E497D00BCF038 /* Sources */,
 				8645A7E6226E497D00BCF038 /* Frameworks */,
 				8645A7E7226E497D00BCF038 /* Resources */,
+				B6C8E8641A95B3BC7B37DBA7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -171,12 +208,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		547E7C27A2CF6383D6FCC84F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-itea-ios-products-magazine-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6C8E8641A95B3BC7B37DBA7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-itea-ios-products-magazine/Pods-itea-ios-products-magazine-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGifOrigin.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-itea-ios-products-magazine/Pods-itea-ios-products-magazine-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8645A7E5226E497D00BCF038 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8645A806226E5D4900BCF038 /* LoginViewController.swift in Sources */,
+				8645A81D226F13EC00BCF038 /* LaunchView.swift in Sources */,
 				8645A80B226EE80600BCF038 /* LoginsDictManager.swift in Sources */,
 				8645A7ED226E497D00BCF038 /* AppDelegate.swift in Sources */,
 				8645A808226E5D6D00BCF038 /* UsersDictModel.swift in Sources */,
@@ -316,6 +401,7 @@
 		};
 		8645A7FC226E497F00BCF038 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA8920B4B2A565131614A6C7 /* Pods-itea-ios-products-magazine.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -333,6 +419,7 @@
 		};
 		8645A7FD226E497F00BCF038 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB0085F57E291195388222E9 /* Pods-itea-ios-products-magazine.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

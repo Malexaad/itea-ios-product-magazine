@@ -5,15 +5,15 @@
 //  Created by Alex Marfutin on 4/22/19.
 //  Copyright © 2019 G9. All rights reserved.
 //
-
+import Foundation
 import UIKit
-
+import SwiftGifOrigin
 class LoginViewController: UIViewController {
 
-    @IBOutlet var frameUIImage: UIImageView!
+    
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
-    
+    @IBOutlet var buttonView: UIButton!
     
     var loginPassDict = LoginDictManager().GetLogPassDict()
     var userInfo : UserInfoModel?
@@ -23,8 +23,8 @@ class LoginViewController: UIViewController {
     }
     
     func FrameInit() {
-        frameUIImage.clipsToBounds = true
-        frameUIImage.layer.cornerRadius = 25
+        buttonView.clipsToBounds = true
+        buttonView.layer.cornerRadius = 25
     }
     
     func CheckLoginPass(username : String, password : String) -> Bool {
