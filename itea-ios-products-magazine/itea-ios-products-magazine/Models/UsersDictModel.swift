@@ -11,7 +11,7 @@ import UIKit
 
 class UserDictModel {
    var userFoto : UIImage
-   private var userPassword : String
+   var userPassword : String
     
     init(foto : UIImage, password: String) {
         self.userFoto = foto
