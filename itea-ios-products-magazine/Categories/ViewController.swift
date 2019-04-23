@@ -33,6 +33,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         arrayList.append(.milk)
         arrayList.append(.fruit)
         arrayList.append(.snacks)
+        
+        userImage.clipsToBounds = true
+        userImage.layer.cornerRadius = 35
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

@@ -14,6 +14,8 @@ class ListCell: UITableViewCell {
     @IBOutlet weak var cellImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        cellImage.clipsToBounds = true
+        cellImage.layer.cornerRadius = 20
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
