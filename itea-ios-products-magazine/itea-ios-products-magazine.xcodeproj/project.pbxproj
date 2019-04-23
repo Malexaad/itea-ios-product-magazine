@@ -13,6 +13,7 @@
 		8645A802226E5D1400BCF038 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8645A801226E5D1400BCF038 /* Login.storyboard */; };
 		8645A806226E5D4900BCF038 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8645A805226E5D4900BCF038 /* LoginViewController.swift */; };
 		8645A808226E5D6D00BCF038 /* UsersDictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8645A807226E5D6D00BCF038 /* UsersDictModel.swift */; };
+		8645A80B226EE80600BCF038 /* LoginsDictManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8645A80A226EE80600BCF038 /* LoginsDictManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8645A801226E5D1400BCF038 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		8645A805226E5D4900BCF038 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8645A807226E5D6D00BCF038 /* UsersDictModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDictModel.swift; sourceTree = "<group>"; };
+		8645A80A226EE80600BCF038 /* LoginsDictManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginsDictManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		8645A7EB226E497D00BCF038 /* itea-ios-products-magazine */ = {
 			isa = PBXGroup;
 			children = (
+				8645A809226EE7EE00BCF038 /* Managers */,
 				8645A804226E5D2700BCF038 /* Models */,
 				8645A803226E5D1D00BCF038 /* Controllers */,
 				8645A800226E5CFA00BCF038 /* Storyboards */,
@@ -89,6 +92,14 @@
 				8645A807226E5D6D00BCF038 /* UsersDictModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8645A809226EE7EE00BCF038 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				8645A80A226EE80600BCF038 /* LoginsDictManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8645A806226E5D4900BCF038 /* LoginViewController.swift in Sources */,
+				8645A80B226EE80600BCF038 /* LoginsDictManager.swift in Sources */,
 				8645A7ED226E497D00BCF038 /* AppDelegate.swift in Sources */,
 				8645A808226E5D6D00BCF038 /* UsersDictModel.swift in Sources */,
 			);

@@ -10,21 +10,34 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet var frameUIImage: UIImageView!
+    @IBOutlet var usernameTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
+    
+    
+    var loginPassDict = LoginDictManager().GetLogPassDict()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        FrameInit()
+       
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func FrameInit() {
+        frameUIImage.clipsToBounds = true
+        frameUIImage.layer.cornerRadius = 25
     }
-    */
-
+    
+    func CheckLoginPass() {
+        
+    }
+    
+    func Alert() {
+    
+    }
+    
+    @IBAction func signUpButtonTapped(_ sender: Any) {
+        
+    }
+    
 }

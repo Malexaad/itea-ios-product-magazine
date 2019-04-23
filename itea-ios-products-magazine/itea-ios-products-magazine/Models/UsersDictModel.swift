@@ -7,3 +7,14 @@
 //
 
 import Foundation
+import UIKit
+
+class UserDictModel {
+   var userFoto : UIImage
+   private var userPassword : String
+    
+    init(foto : UIImage, password: String) {
+        self.userFoto = foto
+        self.userPassword = password
+    }
+}
