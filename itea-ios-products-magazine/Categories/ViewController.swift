@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var shopNameLabel: UILabel!
     @IBOutlet weak var Table: UITableView!
     var arrayList: [ItemType] = []
     override func viewDidLoad() {
@@ -21,13 +24,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let listCell = UINib(nibName: "ListCell", bundle: nil)
         Table.register(listCell, forCellReuseIdentifier: "ListCell")
         
-        _ = ItemType.test1
-        _ = ItemType.test2
-        _ = ItemType.test3
+        _ = ItemType.fish
+        _ = ItemType.milk
+        _ = ItemType.fruit
+        _ = ItemType.snacks
         
-        arrayList.append(.test1)
-        arrayList.append(.test2)
-        arrayList.append(.test3)
+        arrayList.append(.fish)
+        arrayList.append(.milk)
+        arrayList.append(.fruit)
+        arrayList.append(.snacks)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -39,7 +44,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 107
+        return 231
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
