@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Sign-Me-Up.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "default-image.jpg",
       "scale" : "2x"
     },
     {

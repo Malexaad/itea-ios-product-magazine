@@ -55,7 +55,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         barView.backgroundColor = UIColor(red:0.81, green:0.32, blue:0.17, alpha:1.0)
         enterLabel.font = enterLabel.font.withSize(self.view.frame.width / 10 - 2)
         enterLabel.textColor = UIColor(red:0.81, green:0.32, blue:0.17, alpha:1.0)
-        
     }
     
     func CheckLoginPass(username : String, password : String) -> Bool {
