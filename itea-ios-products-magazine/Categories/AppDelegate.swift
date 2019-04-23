@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  itea-ios-products-magazine
+//  Categories
 //
-//  Created by Alex Marfutin on 4/22/19.
-//  Copyright © 2019 G9. All rights reserved.
+//  Created by Даниил Чупайда on 4/23/19.
+//  Copyright © 2019 ITEA. All rights reserved.
 //
 
 import UIKit
