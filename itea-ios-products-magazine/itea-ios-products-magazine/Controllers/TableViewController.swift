@@ -10,6 +10,7 @@ import UIKit
 
 class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var avatarImage: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func back(_ sender: Any) {

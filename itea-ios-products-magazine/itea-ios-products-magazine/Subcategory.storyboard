@@ -38,7 +38,6 @@
                                             <constraint firstAttribute="height" constant="60" id="1Wm-Z6-pYS"/>
                                             <constraint firstAttribute="width" constant="60" id="GAB-3g-IO1"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="back:" destination="JB4-ou-3Wh" eventType="touchUpInside" id="opF-6x-4cA"/>
                                         </connections>
@@ -100,6 +99,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ls5-Jc-sXz"/>
                     <connections>
+                        <outlet property="avatarImage" destination="mdv-4M-90Z" id="eb2-fX-ENs"/>
                         <outlet property="tableView" destination="J1a-TW-sR5" id="veN-Tq-Sma"/>
                     </connections>
                 </viewController>
