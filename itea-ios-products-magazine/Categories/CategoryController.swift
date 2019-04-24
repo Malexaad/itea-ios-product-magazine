@@ -14,7 +14,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var shopNameLabel: UILabel!
     @IBOutlet weak var Table: UITableView!
+    
     var arrayList: [ItemType] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,11 +25,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let listCell = UINib(nibName: "ListCell", bundle: nil)
         Table.register(listCell, forCellReuseIdentifier: "ListCell")
-        
-        _ = ItemType.fish
-        _ = ItemType.milk
-        _ = ItemType.fruit
-        _ = ItemType.snacks
         
         arrayList.append(.fish)
         arrayList.append(.milk)
