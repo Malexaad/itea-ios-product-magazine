@@ -24,6 +24,7 @@ class ListCell: UITableViewCell {
     
     func update(type: ItemType) {
         cellNameLabel.text = ItemType.returnNameType(type: type)
+        cellImage.image = ItemType.returnImageItem(type: type)
     }
     
 }

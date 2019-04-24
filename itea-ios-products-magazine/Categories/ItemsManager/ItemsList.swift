@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum ItemType {
     case fish
@@ -24,6 +25,18 @@ enum ItemType {
             return "Овощи, фрукты"
         case .snacks:
             return "Снеки"
+        }
+    }
+    static func returnImageItem(type: ItemType) -> UIImage {
+        switch type {
+        case .fish:
+            return UIImage(named: "fish.jpg")!
+        case .milk:
+            return UIImage(named: "milk.jpg")!
+        case .fruit:
+            return UIImage(named: "fruit.jpg")!
+        case .snacks:
+            return UIImage(named: "snacks.jpg")!
         }
     }
 }
