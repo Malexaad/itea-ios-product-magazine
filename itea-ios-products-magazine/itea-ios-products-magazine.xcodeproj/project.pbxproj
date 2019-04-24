@@ -8,18 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		8645A7ED226E497D00BCF038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8645A7EC226E497D00BCF038 /* AppDelegate.swift */; };
+		8645A7EF226E497D00BCF038 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8645A7EE226E497D00BCF038 /* ViewController.swift */; };
 		8645A7F2226E497D00BCF038 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8645A7F0226E497D00BCF038 /* Main.storyboard */; };
 		8645A7F4226E497F00BCF038 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8645A7F3226E497F00BCF038 /* Assets.xcassets */; };
+		8645A7F7226E497F00BCF038 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8645A7F5226E497F00BCF038 /* LaunchScreen.storyboard */; };
 		9CF6C8EF226F9B410058B710 /* Feedback.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CF6C8EE226F9B410058B710 /* Feedback.storyboard */; };
+		9CF6C8F1226F9E430058B710 /* FeedbackCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF6C8F0226F9E430058B710 /* FeedbackCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8645A7E9226E497D00BCF038 /* itea-ios-products-magazine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "itea-ios-products-magazine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8645A7EC226E497D00BCF038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8645A7EE226E497D00BCF038 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8645A7F1226E497D00BCF038 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8645A7F3226E497F00BCF038 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8645A7F6226E497F00BCF038 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8645A7F8226E497F00BCF038 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CF6C8EE226F9B410058B710 /* Feedback.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feedback.storyboard; sourceTree = "<group>"; };
+		9CF6C8F0226F9E430058B710 /* FeedbackCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +60,11 @@
 			children = (
 				8645A7EC226E497D00BCF038 /* AppDelegate.swift */,
 				9CF6C8EE226F9B410058B710 /* Feedback.storyboard */,
+				9CF6C8F0226F9E430058B710 /* FeedbackCollectionViewController.swift */,
+				8645A7EE226E497D00BCF038 /* ViewController.swift */,
 				8645A7F0226E497D00BCF038 /* Main.storyboard */,
 				8645A7F3226E497F00BCF038 /* Assets.xcassets */,
+				8645A7F5226E497F00BCF038 /* LaunchScreen.storyboard */,
 				8645A7F8226E497F00BCF038 /* Info.plist */,
 			);
 			path = "itea-ios-products-magazine";
@@ -119,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8645A7F7226E497F00BCF038 /* LaunchScreen.storyboard in Resources */,
 				8645A7F4226E497F00BCF038 /* Assets.xcassets in Resources */,
 				8645A7F2226E497D00BCF038 /* Main.storyboard in Resources */,
 				9CF6C8EF226F9B410058B710 /* Feedback.storyboard in Resources */,
@@ -132,7 +142,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8645A7EF226E497D00BCF038 /* ViewController.swift in Sources */,
 				8645A7ED226E497D00BCF038 /* AppDelegate.swift in Sources */,
+				9CF6C8F1226F9E430058B710 /* FeedbackCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +157,14 @@
 				8645A7F1226E497D00BCF038 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8645A7F5226E497F00BCF038 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8645A7F6226E497F00BCF038 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
