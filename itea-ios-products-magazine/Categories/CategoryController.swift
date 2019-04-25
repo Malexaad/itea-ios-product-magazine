@@ -10,7 +10,9 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet weak var backButton: UIButton!
+
+    @IBAction func backButton(_ sender: Any) {
+    }
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var shopNameLabel: UILabel!
     @IBOutlet weak var Table: UITableView!
