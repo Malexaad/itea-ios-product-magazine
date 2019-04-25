@@ -13,6 +13,7 @@ class ListCell: UITableViewCell {
     @IBOutlet weak var whiteBackground: UIImageView!
     @IBOutlet weak var cellNameLabel: UILabel!
     @IBOutlet weak var cellImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         

@@ -14,6 +14,7 @@ enum ItemType {
     case milk
     case fruit
     case snacks
+    case drinks
     
     static func returnNameType(type: ItemType) -> String {
         switch type {
@@ -25,6 +26,8 @@ enum ItemType {
             return "Овощи, фрукты"
         case .snacks:
             return "Снеки"
+        case .drinks:
+            return "Напитки"
         }
     }
     static func returnImageItem(type: ItemType) -> UIImage {
@@ -37,6 +40,8 @@ enum ItemType {
             return UIImage(named: "fruit.jpg")!
         case .snacks:
             return UIImage(named: "snacks.jpg")!
+        case .drinks:
+            return UIImage(named: "drinks.jpg")!
         }
     }
 }

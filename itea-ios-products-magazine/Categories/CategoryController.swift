@@ -28,10 +28,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let listCell = UINib(nibName: "ListCell", bundle: nil)
         Table.register(listCell, forCellReuseIdentifier: "ListCell")
         
+        // Add here new categories from ItemsManager
         arrayList.append(.fish)
         arrayList.append(.milk)
         arrayList.append(.fruit)
         arrayList.append(.snacks)
+        arrayList.append(.drinks)
+        /////////////////////////
         
         userImage.clipsToBounds = true
         userImage.layer.cornerRadius = 35
