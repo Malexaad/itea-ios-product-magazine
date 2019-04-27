@@ -18,6 +18,8 @@ class feedbackCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var star3: UIImageView!
     @IBOutlet weak var star4: UIImageView!
     @IBOutlet weak var star5: UIImageView!
+    @IBOutlet weak var userNameField: UITextField!
+    @IBOutlet weak var commentNameField: UITextField!
     
     var raitingStarArray: [UIImageView] = []
     
@@ -25,5 +27,21 @@ class feedbackCollectionViewCell: UICollectionViewCell {
         userPhoto.layer.cornerRadius = userPhoto.layer.bounds.width/2
         raitingStarArray = [star1,star2,star3,star4,star5]
     }
+    
+    @IBAction func star1ButtonPressed(_ sender: Any) {
+    }
+    
+    @IBAction func star2ButtonPressed(_ sender: Any) {
+    }
+    
+    @IBAction func star3ButtonPressed(_ sender: Any) {
+    }
+    
+    @IBAction func star4ButtonPressed(_ sender: Any) {
+    }
+    
+    @IBAction func star5ButtonPressed(_ sender: Any) {
+    }
+    
 }
 
