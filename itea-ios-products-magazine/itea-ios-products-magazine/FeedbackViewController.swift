@@ -35,7 +35,7 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = collectionView.dequeueReusableCell(withReuseIdentifier: "feedbackCollectionViewCell", for: indexPath) as! feedbackCollectionViewCell
-        item.setCornerRadius()
+        item.update()
         item.layer.cornerRadius = 8
         return item
     }
