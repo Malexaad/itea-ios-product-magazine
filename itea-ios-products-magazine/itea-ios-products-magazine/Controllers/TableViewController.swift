@@ -17,6 +17,8 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
     }
     
+    var arraySubcategory: [SubcategoryList] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -26,8 +28,36 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         let tableViewCell = UINib(nibName: "TableViewCell", bundle: nil)
         tableView.register(tableViewCell, forCellReuseIdentifier: "TableViewCell")
-      
-
+        
+        
+        avatarImage.clipsToBounds = true
+        avatarImage.layer.cornerRadius = 30
+        
+        arraySubcategory.append(.chackers1)
+        arraySubcategory.append(.cheese1)
+        arraySubcategory.append(.cheese2)
+        arraySubcategory.append(.chips1)
+        arraySubcategory.append(.chips2)
+        arraySubcategory.append(.fish1)
+        arraySubcategory.append(.fish2)
+        arraySubcategory.append(.fruit1)
+        arraySubcategory.append(.fruit2)
+        arraySubcategory.append(.green1)
+        arraySubcategory.append(.green2)
+        arraySubcategory.append(.iceCream1)
+        arraySubcategory.append(.iceCream2)
+        arraySubcategory.append(.iceCream3)
+        arraySubcategory.append(.ikraChernaya1)
+        arraySubcategory.append(.ikraKrasnaya1)
+        arraySubcategory.append(.ikraKrasnaya2)
+        arraySubcategory.append(.ikraKrasnaya3)
+        arraySubcategory.append(.milk1)
+        arraySubcategory.append(.milk2)
+        arraySubcategory.append(.peanut1)
+        arraySubcategory.append(.peanut2)
+        arraySubcategory.append(.vegetable1)
+        arraySubcategory.append(.vegetable2)
+        arraySubcategory.append(.vegetable3)
     }
 
     
@@ -58,6 +88,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
+        cell.update(type: arraySubcategory[indexPath.row])
         return cell
     }
 }

@@ -22,5 +22,9 @@ class TableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
     }
+    func update(type: SubcategoryList) {
+        nameLabel.text = SubcategoryList.returnName(type: type)
+    }
+    
     
 }
