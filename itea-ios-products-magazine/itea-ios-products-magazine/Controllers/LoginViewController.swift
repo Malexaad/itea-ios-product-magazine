@@ -30,8 +30,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var barView: UIView!
     @IBOutlet var enterLabel: UILabel!
     @IBOutlet var loginView: UIView!
+    @IBOutlet var loginPassView: UIImageView!
+    @IBOutlet var regViewButton: UIButton!
     
-    var loginPassDict = LoginDictManager().GetLogPassDict()
+    var loginPassDict : [UserDictModel]?
     var userInfo : UserInfoModel?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,21 +50,29 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func FrameInit() {
         buttonView.clipsToBounds = true
+        let customColor = UIColor(red:0.81, green:0.32, blue:0.17, alpha:1.0)
         buttonView.translatesAutoresizingMaskIntoConstraints = false
         buttonView.layer.cornerRadius = 25
-        buttonView.backgroundColor = UIColor(red:0.81, green:0.32, blue:0.17, alpha:1.0)
+        buttonView.backgroundColor = customColor
         buttonView.titleLabel?.font = enterLabel.font.withSize(self.view.frame.width / 10 - 2)
-        barView.backgroundColor = UIColor(red:0.81, green:0.32, blue:0.17, alpha:1.0)
+        barView.backgroundColor = customColor
         enterLabel.font = enterLabel.font.withSize(self.view.frame.width / 10 - 2)
-        enterLabel.textColor = UIColor(red:0.81, green:0.32, blue:0.17, alpha:1.0)
+        enterLabel.textColor = customColor
+        loginPassView.backgroundColor = customColor
+        regViewButton.translatesAutoresizingMaskIntoConstraints = false
+        regViewButton.layer.cornerRadius = 25
+        regViewButton.backgroundColor = customColor
+        regViewButton.titleLabel?.font = enterLabel.font.withSize(self.view.frame.width / 15 - 8)
+        passwordTextField.isSecureTextEntry = true
     }
     
     func CheckLoginPass(username : String, password : String) -> Bool {
             var checkFlag = false
-            for(key,value) in loginPassDict {
-                if(key == username) {
-                    if(value.userPassword == password) {
-                        userInfo = UserInfoModel(username: key, userFoto: value.userFoto)
+            loginPassDict = retrievePeople()
+            for items in loginPassDict! {
+                if(items.userName == username) {
+                    if(items.userPassword == password) {
+                        userInfo = UserInfoModel(username: items.userName, userFoto: items.userFoto)
                         checkFlag = true
                     } else {
                         Alert(errorCode: 2)
@@ -113,6 +123,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func showPasswordButton(_ sender: Any) {
         passwordTextField.isSecureTextEntry.toggle()
+    }
+    
+    @IBAction func goToRegView(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func retrievePeople() -> [UserDictModel]? {
+        if let unarchivedObject = UserDefaults.standard.object(forKey: "LogDictionary") as? NSData {
+            return NSKeyedUnarchiver.unarchiveObject(with: unarchivedObject as Data) as? [UserDictModel]
+        }
+        return nil
     }
     
 }

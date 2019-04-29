@@ -16,6 +16,7 @@
 		8645A80B226EE80600BCF038 /* LoginsDictManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8645A80A226EE80600BCF038 /* LoginsDictManager.swift */; };
 		8645A812226F06B400BCF038 /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8645A811226F06B400BCF038 /* UserInfoModel.swift */; };
 		8645A81D226F13EC00BCF038 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8645A81C226F13EC00BCF038 /* LaunchView.swift */; };
+		86D85D8F2277569000ACC476 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D85D8E2277569000ACC476 /* RegisterViewController.swift */; };
 		F1CDBBE3C5A67A36BFD94F44 /* Pods_itea_ios_products_magazine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA19BB1F514E28C917FEC308 /* Pods_itea_ios_products_magazine.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		8645A80A226EE80600BCF038 /* LoginsDictManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginsDictManager.swift; sourceTree = "<group>"; };
 		8645A811226F06B400BCF038 /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
 		8645A81C226F13EC00BCF038 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		86D85D8E2277569000ACC476 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		CA19BB1F514E28C917FEC308 /* Pods_itea_ios_products_magazine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itea_ios_products_magazine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8920B4B2A565131614A6C7 /* Pods-itea-ios-products-magazine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itea-ios-products-magazine.debug.xcconfig"; path = "Target Support Files/Pods-itea-ios-products-magazine/Pods-itea-ios-products-magazine.debug.xcconfig"; sourceTree = "<group>"; };
 		EB0085F57E291195388222E9 /* Pods-itea-ios-products-magazine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itea-ios-products-magazine.release.xcconfig"; path = "Target Support Files/Pods-itea-ios-products-magazine/Pods-itea-ios-products-magazine.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				8645A805226E5D4900BCF038 /* LoginViewController.swift */,
+				86D85D8E2277569000ACC476 /* RegisterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			files = (
 				8645A806226E5D4900BCF038 /* LoginViewController.swift in Sources */,
 				8645A81D226F13EC00BCF038 /* LaunchView.swift in Sources */,
+				86D85D8F2277569000ACC476 /* RegisterViewController.swift in Sources */,
 				8645A80B226EE80600BCF038 /* LoginsDictManager.swift in Sources */,
 				8645A7ED226E497D00BCF038 /* AppDelegate.swift in Sources */,
 				8645A808226E5D6D00BCF038 /* UsersDictModel.swift in Sources */,

@@ -10,21 +10,35 @@ import Foundation
 import UIKit
 
 class LoginDictManager {
-    var logPassDict = Dictionary<String,UserDictModel>()
+    var logPassDict = [UserDictModel]()
     
     init() {
-        logPassDict.updateValue(UserDictModel(foto: UIImage(imageLiteralResourceName: "malex-image"), password: "qwerty"), forKey: "malex")
-        logPassDict.updateValue(UserDictModel(foto: UIImage(imageLiteralResourceName: "lilia-image"), password: "12345"), forKey: "lili")
-        logPassDict.updateValue(UserDictModel(foto: UIImage(imageLiteralResourceName: "mol-image"), password: "qazwsx"), forKey: "mol")
-        logPassDict.updateValue(UserDictModel(foto: UIImage(imageLiteralResourceName: "viacheslav-image"), password: "asdfgh"), forKey: "viacheslav")
-        logPassDict.updateValue(UserDictModel(foto: UIImage(imageLiteralResourceName: "vitalik-image"), password: "zxcvbn"), forKey: "vitalik")
-        logPassDict.updateValue(UserDictModel(foto: UIImage(imageLiteralResourceName: "tor-image"), password: "qwerty123"), forKey: "tor")
-        logPassDict.updateValue(UserDictModel(foto: UIImage(imageLiteralResourceName: "default-image"), password: "asd123"), forKey: "daniel")
-        logPassDict.updateValue(UserDictModel(foto: UIImage(imageLiteralResourceName: "kiril-image"), password: "rfvtgb"), forKey: "kiril")
+        logPassDict.append(UserDictModel(foto: UIImage(imageLiteralResourceName: "malex-image"), password: "qwerty" , userName: "malex"))
+        logPassDict.append(UserDictModel(foto: UIImage(imageLiteralResourceName: "lilia-image"), password: "12345" , userName: "lili"))
+        logPassDict.append(UserDictModel(foto: UIImage(imageLiteralResourceName: "mol-image"), password: "qazwsx" , userName: "mol"))
+        logPassDict.append(UserDictModel(foto: UIImage(imageLiteralResourceName: "viacheslav-image"), password: "asdfgh" , userName: "viacheslav"))
+        logPassDict.append(UserDictModel(foto: UIImage(imageLiteralResourceName: "vitalik-image"), password: "zxcvbn" , userName: "vitalik"))
+        logPassDict.append(UserDictModel(foto: UIImage(imageLiteralResourceName: "tor-image"), password: "qwerty123" , userName:"tor"))
+        logPassDict.append(UserDictModel(foto: UIImage(imageLiteralResourceName: "default-image"), password: "asd123" , userName: "daniel"))
+        logPassDict.append(UserDictModel(foto: UIImage(imageLiteralResourceName: "kiril-image"), password: "rfvtgb" , userName: "kiril"))
+        
+        
+        let arch = archivePeople(groups: logPassDict)
+        UserDefaults.standard.set(arch, forKey: "LogDictionary")
+        UserDefaults.standard.synchronize()
         
     }
     
-    func GetLogPassDict() -> Dictionary<String,UserDictModel> {
-        return logPassDict
+    func archivePeople(groups:[UserDictModel]) -> NSData {
+        let archivedObject = NSKeyedArchiver.archivedData(withRootObject: groups as NSArray)
+        return archivedObject as NSData
     }
+    
+    func retrievePeople() -> [UserDictModel]? {
+        if let unarchivedObject = UserDefaults.standard.object(forKey: "LogDictionary") as? NSData {
+            return NSKeyedUnarchiver.unarchiveObject(with: unarchivedObject as Data) as? [UserDictModel]
+        }
+        return nil
+    }
+    
 }

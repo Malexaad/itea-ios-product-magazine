@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "itea-ios-products-magazine/Controllers/LoginViewController.swift"
-            timestampString = "577742579.229985"
+            timestampString = "578255196.076115"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "signUpButtonTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
