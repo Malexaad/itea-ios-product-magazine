@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		844B35CC227499E700898128 /* Shops.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844B35CB227499E700898128 /* Shops.storyboard */; };
+		844B35CE22749D0300898128 /* ShopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B35CD22749D0300898128 /* ShopsViewController.swift */; };
+		844B35D42274C9CA00898128 /* ListShopsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B35D22274C9CA00898128 /* ListShopsCell.swift */; };
+		844B35D52274C9CA00898128 /* ListShopsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844B35D32274C9CA00898128 /* ListShopsCell.xib */; };
+		844B35D72274D67A00898128 /* ShopsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B35D62274D67A00898128 /* ShopsType.swift */; };
 		8645A7ED226E497D00BCF038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8645A7EC226E497D00BCF038 /* AppDelegate.swift */; };
-		8645A7EF226E497D00BCF038 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8645A7EE226E497D00BCF038 /* ViewController.swift */; };
-		8645A7F2226E497D00BCF038 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8645A7F0226E497D00BCF038 /* Main.storyboard */; };
 		8645A7F4226E497F00BCF038 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8645A7F3226E497F00BCF038 /* Assets.xcassets */; };
 		8645A7F7226E497F00BCF038 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8645A7F5226E497F00BCF038 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		844B35CB227499E700898128 /* Shops.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shops.storyboard; sourceTree = "<group>"; };
+		844B35CD22749D0300898128 /* ShopsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsViewController.swift; sourceTree = "<group>"; };
+		844B35D22274C9CA00898128 /* ListShopsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListShopsCell.swift; sourceTree = "<group>"; };
+		844B35D32274C9CA00898128 /* ListShopsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListShopsCell.xib; sourceTree = "<group>"; };
+		844B35D62274D67A00898128 /* ShopsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopsType.swift; sourceTree = "<group>"; };
 		8645A7E9226E497D00BCF038 /* itea-ios-products-magazine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "itea-ios-products-magazine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8645A7EC226E497D00BCF038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8645A7EE226E497D00BCF038 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8645A7F1226E497D00BCF038 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8645A7F3226E497F00BCF038 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8645A7F6226E497F00BCF038 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8645A7F8226E497F00BCF038 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -35,6 +41,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		844B35CF2274C41300898128 /* ShopsTypes */ = {
+			isa = PBXGroup;
+			children = (
+				844B35D62274D67A00898128 /* ShopsType.swift */,
+			);
+			path = ShopsTypes;
+			sourceTree = "<group>";
+		};
+		844B35D02274C4A100898128 /* ShopsControllers */ = {
+			isa = PBXGroup;
+			children = (
+				844B35CD22749D0300898128 /* ShopsViewController.swift */,
+				844B35CB227499E700898128 /* Shops.storyboard */,
+			);
+			path = ShopsControllers;
+			sourceTree = "<group>";
+		};
+		844B35D12274C4C900898128 /* ShopsCell */ = {
+			isa = PBXGroup;
+			children = (
+				844B35D22274C9CA00898128 /* ListShopsCell.swift */,
+				844B35D32274C9CA00898128 /* ListShopsCell.xib */,
+			);
+			path = ShopsCell;
+			sourceTree = "<group>";
+		};
 		8645A7E0226E497D00BCF038 = {
 			isa = PBXGroup;
 			children = (
@@ -54,9 +86,10 @@
 		8645A7EB226E497D00BCF038 /* itea-ios-products-magazine */ = {
 			isa = PBXGroup;
 			children = (
+				844B35D12274C4C900898128 /* ShopsCell */,
+				844B35D02274C4A100898128 /* ShopsControllers */,
+				844B35CF2274C41300898128 /* ShopsTypes */,
 				8645A7EC226E497D00BCF038 /* AppDelegate.swift */,
-				8645A7EE226E497D00BCF038 /* ViewController.swift */,
-				8645A7F0226E497D00BCF038 /* Main.storyboard */,
 				8645A7F3226E497F00BCF038 /* Assets.xcassets */,
 				8645A7F5226E497F00BCF038 /* LaunchScreen.storyboard */,
 				8645A7F8226E497F00BCF038 /* Info.plist */,
@@ -124,7 +157,8 @@
 			files = (
 				8645A7F7226E497F00BCF038 /* LaunchScreen.storyboard in Resources */,
 				8645A7F4226E497F00BCF038 /* Assets.xcassets in Resources */,
-				8645A7F2226E497D00BCF038 /* Main.storyboard in Resources */,
+				844B35CC227499E700898128 /* Shops.storyboard in Resources */,
+				844B35D52274C9CA00898128 /* ListShopsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,22 +169,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8645A7EF226E497D00BCF038 /* ViewController.swift in Sources */,
+				844B35CE22749D0300898128 /* ShopsViewController.swift in Sources */,
+				844B35D72274D67A00898128 /* ShopsType.swift in Sources */,
 				8645A7ED226E497D00BCF038 /* AppDelegate.swift in Sources */,
+				844B35D42274C9CA00898128 /* ListShopsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8645A7F0226E497D00BCF038 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8645A7F1226E497D00BCF038 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8645A7F5226E497F00BCF038 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -283,6 +311,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "itea-ios-products-magazine/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +329,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "itea-ios-products-magazine/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
