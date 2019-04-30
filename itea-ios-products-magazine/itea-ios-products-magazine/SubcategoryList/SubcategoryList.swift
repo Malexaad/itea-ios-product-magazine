@@ -38,6 +38,13 @@ enum SubcategoryList {
     case chips1
     case chips2
     case chackers1
+    //Napitki
+    case alcohol1
+    case alcohol2
+    case water1
+    case water2
+    case water3
+    case juice1
     
     static func returnName(type: SubcategoryList) -> String {
         switch type {
@@ -91,6 +98,18 @@ enum SubcategoryList {
             return "Картофельные"
         case .chips2:
             return "Фруктовые"
+        case .alcohol1:
+            return "Вино"
+        case .alcohol2:
+            return "Пиво"
+        case .water1:
+            return "Без газа"
+        case .water2:
+            return "Сильногазированная"
+        case .water3:
+            return "Слабогазированная"
+        case .juice1:
+            return "Натуральные"
             
         }
     }
