@@ -12,12 +12,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
 
     @IBAction func backButton(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var shopNameLabel: UILabel!
     @IBOutlet weak var Table: UITableView!
     
-    var arrayList: [ItemType] = []
     var shopName = "<shop>"
     var userImageName = UIImage(named: "user.png")
     
@@ -30,13 +30,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let listCell = UINib(nibName: "ListCell", bundle: nil)
         Table.register(listCell, forCellReuseIdentifier: "ListCell")
         
-        // Add here new categories from ItemsManager
-        arrayList.append(.fish)
-        arrayList.append(.milk)
-        arrayList.append(.fruit)
-        arrayList.append(.snacks)
-        arrayList.append(.drinks)
-        /////////////////////////
+        ItemType.listAppend()
         
         userImage.image = userImageName
         userImage.clipsToBounds = true
@@ -64,8 +58,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        //let vc = storyboard?.instantiateViewController(withIdentifier: "TableViewController") as! TableViewController
+        //vc.categoryName = ItemType.returnNameType(type: arrayList[indexPath.row])
+        //self.navigationController?.pushViewController(vc, animated: true)
     }
-
 }
 

@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+var arrayList: [ItemType] = []
+
 enum ItemType {
     case fish
     case milk
@@ -43,5 +45,13 @@ enum ItemType {
         case .drinks:
             return UIImage(named: "drinks.jpg")!
         }
+    }
+    
+    static func listAppend() {
+        arrayList.append(.fish)
+        arrayList.append(.milk)
+        arrayList.append(.fruit)
+        arrayList.append(.snacks)
+        arrayList.append(.drinks)
     }
 }
