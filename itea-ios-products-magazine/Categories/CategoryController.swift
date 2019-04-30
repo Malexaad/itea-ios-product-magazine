@@ -18,6 +18,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var Table: UITableView!
     
     var arrayList: [ItemType] = []
+    var shopName = "<shop>"
+    var userImageName = UIImage(named: "user.png")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +38,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         arrayList.append(.drinks)
         /////////////////////////
         
+        userImage.image = userImageName
         userImage.clipsToBounds = true
         userImage.layer.cornerRadius = 35
+        
+        shopNameLabel.text = shopName
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -59,6 +64,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
 
 }
