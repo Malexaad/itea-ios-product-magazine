@@ -100,7 +100,7 @@
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ic0-PI-rlG">
-                                <rect key="frame" x="0.0" y="109" width="414" height="753"/>
+                                <rect key="frame" x="0.0" y="109" width="414" height="678"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="On4-p0-O2V">
                                     <size key="itemSize" width="386" height="220"/>
@@ -330,6 +330,8 @@
                                             <outlet property="comment" destination="96p-Em-r5H" id="NTP-E5-fTq"/>
                                             <outlet property="commentNameField" destination="6Zc-kl-6li" id="KRE-oM-RWR"/>
                                             <outlet property="dateLabel" destination="C5V-qj-eeF" id="mpZ-cH-vyV"/>
+                                            <outlet property="raitingView" destination="61W-fs-3zj" id="tsr-F0-SVy"/>
+                                            <outlet property="saveFeedbackButton" destination="fr3-uY-d2P" id="zDg-lH-10P"/>
                                             <outlet property="star1" destination="uJX-jy-IWs" id="NpD-AG-Nwx"/>
                                             <outlet property="star2" destination="8uM-40-gbY" id="ID9-0V-Vzz"/>
                                             <outlet property="star3" destination="Fh1-8j-fGl" id="1gj-CD-BC7"/>
@@ -341,27 +343,54 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1m-Ff-1bk">
+                                <rect key="frame" x="58.5" y="805" width="297" height="39"/>
+                                <color key="backgroundColor" red="0.80784313730000001" green="0.32156862749999998" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="297" id="7lI-Rf-mbO"/>
+                                    <constraint firstAttribute="height" constant="39" id="qor-MA-ty3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="Оставить отзыв">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="leaveFeedbackButtonPressed:" destination="bBj-oJ-sGW" eventType="touchUpInside" id="j6d-kR-ZRa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="xcP-Z3-kWj" firstAttribute="top" secondItem="PWy-G3-fsn" secondAttribute="top" constant="-1" id="8eS-8X-vAy"/>
                             <constraint firstItem="xcP-Z3-kWj" firstAttribute="leading" secondItem="icX-6G-il5" secondAttribute="leading" id="Kyf-Ef-ZV7"/>
                             <constraint firstItem="ic0-PI-rlG" firstAttribute="top" secondItem="xcP-Z3-kWj" secondAttribute="bottom" constant="10" id="Mob-1u-ivl"/>
+                            <constraint firstItem="J1m-Ff-1bk" firstAttribute="centerX" secondItem="ic0-PI-rlG" secondAttribute="centerX" id="Z5J-DF-4dN"/>
+                            <constraint firstItem="J1m-Ff-1bk" firstAttribute="top" secondItem="ic0-PI-rlG" secondAttribute="bottom" constant="18" id="gXQ-U1-nGc"/>
                             <constraint firstItem="ic0-PI-rlG" firstAttribute="top" secondItem="xcP-Z3-kWj" secondAttribute="bottom" constant="10" id="gvx-N8-MQA"/>
-                            <constraint firstItem="icX-6G-il5" firstAttribute="bottom" secondItem="ic0-PI-rlG" secondAttribute="bottom" id="iJB-Kv-iPc"/>
+                            <constraint firstItem="icX-6G-il5" firstAttribute="bottom" secondItem="ic0-PI-rlG" secondAttribute="bottom" constant="75" id="iJB-Kv-iPc"/>
                             <constraint firstItem="xcP-Z3-kWj" firstAttribute="trailing" secondItem="icX-6G-il5" secondAttribute="trailing" id="jp2-TZ-26U"/>
                             <constraint firstItem="icX-6G-il5" firstAttribute="trailing" secondItem="ic0-PI-rlG" secondAttribute="trailing" id="nHr-8V-hvG"/>
                             <constraint firstItem="ic0-PI-rlG" firstAttribute="leading" secondItem="icX-6G-il5" secondAttribute="leading" id="rwe-q8-6fF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="icX-6G-il5"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="bbt-Oy-rXK" appends="YES" id="dAW-UG-e2C"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="fbCollectoinView" destination="ic0-PI-rlG" id="wH1-ft-87a"/>
                         <outlet property="headerLabel" destination="8yv-N6-bq1" id="DcL-2j-baf"/>
+                        <outlet property="leaveFeedback" destination="J1m-Ff-1bk" id="WBY-sb-lN9"/>
                         <outlet property="userPhotoHeader" destination="LHT-NV-PqM" id="o05-A5-KPf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7gW-fi-cnb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="bbt-Oy-rXK">
+                    <connections>
+                        <action selector="TapMove:" destination="bBj-oJ-sGW" id="ftU-M6-gmh"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-15.942028985507248" y="-121.20535714285714"/>
         </scene>
