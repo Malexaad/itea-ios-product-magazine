@@ -25,6 +25,7 @@ class feedbackCollectionViewCell: UICollectionViewCell, UITextFieldDelegate  {
     
     var fb: Feedback?
     var raitingStarArray: [UIImageView] = []
+    var vc: UIViewController?
     
     func update(feedback: Feedback) {
         fb = feedback
@@ -53,7 +54,6 @@ class feedbackCollectionViewCell: UICollectionViewCell, UITextFieldDelegate  {
             }
             commentNameField.backgroundColor = color
             comment.backgroundColor = color
-            raitingView.backgroundColor = color
         }
     }
     
@@ -73,6 +73,27 @@ class feedbackCollectionViewCell: UICollectionViewCell, UITextFieldDelegate  {
         }
     }
     
+    func checkFields() -> Bool {
+        var allFieldsFilled = true
+        var alertMessage = "Пожалуйста заполните следующие поля: "
+        if userNameField.text == "" {
+            allFieldsFilled = false
+            alertMessage.append("Имя пользователя ")
+        }
+        if commentNameField.text == "" {
+            allFieldsFilled = false
+            alertMessage.append("Заголовок отзыва ")
+        }
+        if comment.text == "" {
+            allFieldsFilled = false
+            alertMessage.append("Отзыв ")
+        }
+        if !allFieldsFilled {
+            Alert().presentWarning(delegate: vc!, message: alertMessage)
+        }
+        return allFieldsFilled
+    }
+    
     @IBAction func star1ButtonPressed(_ sender: Any) {
     }
     
@@ -87,6 +108,14 @@ class feedbackCollectionViewCell: UICollectionViewCell, UITextFieldDelegate  {
     
     @IBAction func star5ButtonPressed(_ sender: Any) {
     }
+    
+    @IBAction func saveCommentButtonPressed(_ sender: Any) {
+        let ok = checkFields()
+        if ok {
+            
+        }
+    }
+    
     
 }
 

@@ -12,6 +12,6 @@ import UIKit
     func presentWarning(delegate: UIViewController, message: String) {
         let alert = UIAlertController(title: "Внимание", message: message, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-        delegate.present(alert, animated: true, completion: nil)
+        delegate.present(alert, animated: false, completion: nil)
     }
 }

@@ -300,6 +300,9 @@
                                                     <state key="normal" title="Оставить отзыв">
                                                         <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="saveCommentButtonPressed:" destination="Xpd-l1-Gz5" eventType="touchUpInside" id="PyX-l2-sha"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </view>

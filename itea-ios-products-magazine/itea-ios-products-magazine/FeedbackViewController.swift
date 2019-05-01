@@ -8,10 +8,6 @@
 
 import UIKit
 
-var defaultPicture = "default1"
-var defaultName = "Аноним"
-var defaultProdName = "Товар не выбран"
-
 class FeedbackViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var userPhotoHeader: UIImageView!
@@ -23,6 +19,9 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
     var fbUser: User?
     var fbProduct: Product?
     var feedbackArray: [Feedback] = []
+    var kbWillHide = false
+    var keyboardHeight: CGFloat = 0.0
+    var firstTime = true
     
     
     override func viewDidLoad() {
@@ -56,6 +55,7 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = collectionView.dequeueReusableCell(withReuseIdentifier: "feedbackCollectionViewCell", for: indexPath) as! feedbackCollectionViewCell
+        item.vc = self
         item.update(feedback: feedbackArray[indexPath.row])
         item.layer.cornerRadius = CGFloat(setCornerRadius())
         return item
@@ -70,36 +70,35 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
         //
     }
     
-    func AddComment(comment: String, title: String, date: String, raiting: Int, user: User?, product: Product?, isNewFeedback: Bool) {
-        let emptyFb = "Здесь пока никто ничего не писал..."
-        let emptyTitle = "Нет отзыва"
-        let emptyDate = ""
-        let emptyRaiting = 0
-        let emptyUser = user ?? User(userName: defaultName, userPhoto: defaultPicture)
-        let emptyProduct = product ?? Product(name: defaultProdName)
-        
-        let fbComment  = comment == "" ? emptyFb : comment
-        let fbTitle  = title == "" ? emptyTitle : title
-        let fbDate  = date == "" ? emptyDate : date
-        let fbRaiting  = raiting == 0 ? emptyRaiting : raiting
-        
-        feedbackArray.append(Feedback(comment: fbComment, title: fbTitle, date: fbDate, raiting: fbRaiting, user: emptyUser, product: emptyProduct, isNewFeedback: isNewFeedback))
+    func AddComment(comment: String, title: String, date: String, raiting: Int, user: User?, product: Product?, isNewFeedback: Bool) {        
+        feedbackArray.append(Feedback(comment: comment, title: title, date: date, raiting: raiting, user: user, product: product, isNewFeedback: isNewFeedback))
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
-        let d = notification.userInfo
+        //                if !kbWillHide {
         self.animatedTextField(up: true, height: getKeyboardHeight(notification: notification))
         scrollToLastRow()
+        //        kbWillHide = true
+        //                }
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
+        //        if !kbWillHide {
         self.animatedTextField(up: false, height: getKeyboardHeight(notification: notification))
+        //        }
     }
     
     func getKeyboardHeight(notification: NSNotification) -> CGFloat {
         if let userInfo = notification.userInfo {
             let keyboardSize = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue
-            let kbHeight = keyboardSize?.height ?? 0
+            var kbHeight = keyboardSize?.height ?? 0
+            if firstTime {
+                keyboardHeight = kbHeight
+                firstTime = false
+            }
+            else {
+                kbHeight = keyboardHeight
+            }
             return kbHeight
         }
         return 0
@@ -112,10 +111,17 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func animatedTextField(up: Bool, height: CGFloat) {
         let movement = (up ? -height : height)
-        UIView.animate(withDuration: 0.3, animations: {
-            self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
-            
-        })
+        if movement < 0 && self.view.frame.origin.y < 0 {
+        }
+        else {
+            UIView.animate(withDuration: 0.3, animations: {
+                self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
+            })
+        }
+    }
+    
+    func showButtonAddComment() {
+        leaveFeedback.isHidden = true
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {
@@ -127,6 +133,7 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
         if !prodIsEmpty {
             AddComment(comment: "", title: "", date: "", raiting: 0, user: fbUser, product: fbProduct, isNewFeedback: true)
             fbCollectoinView.reloadData()
+            showButtonAddComment()
         }
         else {
             Alert().presentWarning(delegate: self, message: "Товар не выбран, комментарий оставить нельзя")
@@ -135,6 +142,7 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     @IBAction func TapMove(_ sender: Any) {
         dismissKeyboard()
+        kbWillHide = false
     }
     
     

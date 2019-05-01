@@ -8,6 +8,10 @@
 
 import UIKit
 
+var defaultPicture = "default1"
+var defaultName = "Аноним"
+var defaultProdName = "Товар не выбран"
+
 class Feedback: NSObject {
     var comment = ""
     var title = ""
@@ -17,13 +21,18 @@ class Feedback: NSObject {
     var product: Product?
     var isNewFeedback = false
     
+    var defaultComment = "Здесь пока никто ничего не писал..."
+    var defaultTitle = "Нет отзыва"
+   
     init(comment: String, title: String, date: String, raiting: Int, user: User?, product: Product?, isNewFeedback: Bool) {
-        self.comment = comment
-        self.title = title
+        let defaultUser = User(userName: defaultName, userPhoto: defaultPicture)
+        let defaultProduct = Product(name: defaultProdName)
+        self.comment = comment == "" ? defaultComment : comment
+        self.title = title == "" ? defaultTitle : title
         self.date = date
         self.raiting = raiting
-        self.user = user
-        self.product = product
+        self.user = user ?? defaultUser
+        self.product = product ?? defaultProduct
         self.isNewFeedback = isNewFeedback
     }
 }
