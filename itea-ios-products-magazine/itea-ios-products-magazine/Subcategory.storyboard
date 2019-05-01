@@ -101,6 +101,7 @@
                     <navigationItem key="navigationItem" id="ls5-Jc-sXz"/>
                     <connections>
                         <outlet property="avatarImage" destination="mdv-4M-90Z" id="eb2-fX-ENs"/>
+                        <outlet property="nameCategory" destination="tK9-gu-yxN" id="sap-dA-jKI"/>
                         <outlet property="tableView" destination="J1a-TW-sR5" id="veN-Tq-Sma"/>
                     </connections>
                 </viewController>

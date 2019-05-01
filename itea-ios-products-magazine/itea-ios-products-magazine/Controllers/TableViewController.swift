@@ -12,6 +12,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     @IBOutlet weak var avatarImage: UIImageView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var nameCategory: UILabel!
     
     //GO BACK TO SCREEN "KATEGORY"
     @IBAction func back(_ sender: Any) {
