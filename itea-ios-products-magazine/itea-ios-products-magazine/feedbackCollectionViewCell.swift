@@ -88,6 +88,10 @@ class feedbackCollectionViewCell: UICollectionViewCell, UITextFieldDelegate  {
             allFieldsFilled = false
             alertMessage.append("Отзыв ")
         }
+        if fb?.raiting == 0 {
+            allFieldsFilled = false
+            alertMessage.append("\n Заполните рейтинг звездочками")
+        }
         if !allFieldsFilled {
             Alert().presentWarning(delegate: vc!, message: alertMessage)
         }

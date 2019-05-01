@@ -19,8 +19,11 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
     var fbUser: User?
     var fbProduct: Product?
     var feedbackArray: [Feedback] = []
+    
     var kbWillHide = false
     var keyboardHeight: CGFloat = 0.0
+    var collectionViewHeigth: CGFloat = 0.0
+    var collectionViewWidthSize: CGFloat = 0.0
     var firstTime = true
     
     
@@ -39,6 +42,13 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        collectionViewHeigth = fbCollectoinView.frame.origin.y
+        collectionViewWidthSize = fbCollectoinView.frame.size.height
+        
+        let  fb1 = Feedback(comment: "Гавно", title: "Гавно", raiting: 5, user: user1, product: prod1, isNewFeedback: true)
+        let  fb2 = Feedback(comment: "Гавно", title: "Гавно", raiting: 5, user: user1, product: prod1, isNewFeedback: true)
+        feedbackArray.append(fb1)
+        feedbackArray.append(fb2)
     }
     
     func dismissKeyboard() {
@@ -61,10 +71,10 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
         return item
     }
     
-    func update(user: User?, product: Product?) {
-        fbUser = user
-        fbProduct = product
-    }
+    //    func update(user: User?, product: Product?) {
+    //        fbUser = user
+    //        fbProduct = product
+    //    }
     
     func AddComment(comment: String, title: String, raiting: Int, user: User?, product: Product?, isNewFeedback: Bool) {
         feedbackArray.append(Feedback(comment: comment, title: title, raiting: raiting, user: user, product: product, isNewFeedback: isNewFeedback))
@@ -107,13 +117,13 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func animatedTextField(up: Bool, height: CGFloat) {
         let movement = (up ? -height : height)
-        if movement < 0 && self.view.frame.origin.y < 0 {
-        }
-        else {
-            UIView.animate(withDuration: 0.3, animations: {
-                self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
-            })
-        }
+        
+        self.fbCollectoinView.frame = CGRect(
+            x: self.fbCollectoinView.frame.origin.x,
+            y: collectionViewHeigth,
+            width: self.fbCollectoinView.frame.size.width,
+            height: collectionViewWidthSize + movement)
+        
     }
     
     func showButtonAddComment() {

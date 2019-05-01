@@ -8,14 +8,18 @@
 
 import UIKit
 
+let  prod1 = Product(name: "Чипсы Lays c беконом")
+let  user1 = User(userName: "Анатолич", userPhoto: "anatolii")
+
 class rootTableViewController: UITableViewController {
 
 //   @IBOutlet var tView: UITableView!
-    let  prod1 = Product(name: "Чипсы Lays c беконом")
-    let  user1 = User(userName: "Анатолич", userPhoto: "anatolii")
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        let  fb1 = Feedback(comment: "Гавно", title: "Гавно", raiting: 5, user: user1, product: prod1, isNewFeedback: true)
+//        let  fb2 = Feedback(comment: "Гавно", title: "Гавно", raiting: 5, user: user1, product: prod1, isNewFeedback: true)
     }
 
     // MARK: - Table view data source
