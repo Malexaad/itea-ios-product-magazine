@@ -24,6 +24,7 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
     var fbProduct: Product?
     var feedbackArray: [Feedback] = []
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,6 +37,9 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
         headerLabel.text = fbProduct?.prodName ?? defaultProdName
         userPhotoHeader.layer.cornerRadius = CGFloat(userPhotoHeader.bounds.width/2)
         leaveFeedback.layer.cornerRadius = CGFloat(setCornerRadius())
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     func dismissKeyboard() {
@@ -80,8 +84,38 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
         let fbRaiting  = raiting == 0 ? emptyRaiting : raiting
         
         feedbackArray.append(Feedback(comment: fbComment, title: fbTitle, date: fbDate, raiting: fbRaiting, user: emptyUser, product: emptyProduct, isNewFeedback: isNewFeedback))
-        
-        
+    }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        let d = notification.userInfo
+        self.animatedTextField(up: true, height: getKeyboardHeight(notification: notification))
+        scrollToLastRow()
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        self.animatedTextField(up: false, height: getKeyboardHeight(notification: notification))
+    }
+    
+    func getKeyboardHeight(notification: NSNotification) -> CGFloat {
+        if let userInfo = notification.userInfo {
+            let keyboardSize = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue
+            let kbHeight = keyboardSize?.height ?? 0
+            return kbHeight
+        }
+        return 0
+    }
+    
+    func scrollToLastRow() {
+        let indexPath = NSIndexPath(row: feedbackArray.count - 1, section: 0)
+        self.fbCollectoinView.scrollToItem(at: indexPath as IndexPath, at: .bottom, animated: true)
+    }
+    
+    func animatedTextField(up: Bool, height: CGFloat) {
+        let movement = (up ? -height : height)
+        UIView.animate(withDuration: 0.3, animations: {
+            self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
+            
+        })
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {
@@ -97,7 +131,6 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
         else {
             Alert().presentWarning(delegate: self, message: "Товар не выбран, комментарий оставить нельзя")
         }
-        
     }
     
     @IBAction func TapMove(_ sender: Any) {
