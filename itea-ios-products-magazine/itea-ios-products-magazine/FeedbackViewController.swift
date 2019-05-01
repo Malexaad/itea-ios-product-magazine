@@ -64,14 +64,10 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
     func update(user: User?, product: Product?) {
         fbUser = user
         fbProduct = product
-        //закомментировать этот проверочный код
-        AddComment(comment: "попробовал, очень вкусно", title: "под пивас норм", date: "28.04.2019 13.00", raiting: 4, user: fbUser, product: fbProduct, isNewFeedback: false)
-        AddComment(comment: "полное гавно", title: "отравился", date: "28.04.2019 21.00", raiting: 1, user: fbUser, product: fbProduct, isNewFeedback: false)
-        //
     }
     
-    func AddComment(comment: String, title: String, date: String, raiting: Int, user: User?, product: Product?, isNewFeedback: Bool) {        
-        feedbackArray.append(Feedback(comment: comment, title: title, date: date, raiting: raiting, user: user, product: product, isNewFeedback: isNewFeedback))
+    func AddComment(comment: String, title: String, raiting: Int, user: User?, product: Product?, isNewFeedback: Bool) {
+        feedbackArray.append(Feedback(comment: comment, title: title, raiting: raiting, user: user, product: product, isNewFeedback: isNewFeedback))
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -131,7 +127,7 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
     @IBAction func leaveFeedbackButtonPressed(_ sender: Any)  {
         let prodIsEmpty =  fbProduct == nil ? true : false
         if !prodIsEmpty {
-            AddComment(comment: "", title: "", date: "", raiting: 0, user: fbUser, product: fbProduct, isNewFeedback: true)
+            AddComment(comment: "", title: "", raiting: 0, user: fbUser, product: fbProduct, isNewFeedback: true)
             fbCollectoinView.reloadData()
             showButtonAddComment()
         }
@@ -144,6 +140,5 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
         dismissKeyboard()
         kbWillHide = false
     }
-    
     
 }

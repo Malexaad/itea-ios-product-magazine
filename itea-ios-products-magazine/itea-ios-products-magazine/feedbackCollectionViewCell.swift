@@ -94,19 +94,36 @@ class feedbackCollectionViewCell: UICollectionViewCell, UITextFieldDelegate  {
         return allFieldsFilled
     }
     
+    func rate(_ rateValue: Int) {
+        for i in 0..<raitingStarArray.count {
+            if i <= rateValue-1 {
+                raitingStarArray[i].image = UIImage(named: "star2")
+            }
+            else {
+                raitingStarArray[i].image = UIImage(named: "star1")
+            }
+        }
+        fb?.raiting = rateValue
+    }
+    
     @IBAction func star1ButtonPressed(_ sender: Any) {
+        rate(1)
     }
     
     @IBAction func star2ButtonPressed(_ sender: Any) {
+        rate(2)
     }
     
     @IBAction func star3ButtonPressed(_ sender: Any) {
+        rate(3)
     }
     
     @IBAction func star4ButtonPressed(_ sender: Any) {
+        rate(4)
     }
     
     @IBAction func star5ButtonPressed(_ sender: Any) {
+        rate(5)
     }
     
     @IBAction func saveCommentButtonPressed(_ sender: Any) {
