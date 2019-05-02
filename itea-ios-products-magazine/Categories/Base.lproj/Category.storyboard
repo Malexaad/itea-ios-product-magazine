@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -27,7 +27,7 @@
                                 <color key="backgroundColor" red="0.74327117200000004" green="0.35090947150000001" blue="0.21564197539999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Категории" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7FG-QY-Jlo">
-                                <rect key="frame" x="131.66666666666666" y="44" width="150.99999999999997" height="36"/>
+                                <rect key="frame" x="131.5" y="44" width="151" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="TDN-4d-Ccu"/>
                                 </constraints>
@@ -36,7 +36,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;shop&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GbU-Aj-cgl">
-                                <rect key="frame" x="131.66666666666666" y="88" width="150.99999999999997" height="24"/>
+                                <rect key="frame" x="131.5" y="88" width="151" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="PhO-3j-Gz5"/>
                                 </constraints>
