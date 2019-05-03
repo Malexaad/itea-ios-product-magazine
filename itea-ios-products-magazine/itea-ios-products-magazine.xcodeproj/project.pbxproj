@@ -12,6 +12,7 @@
 		22086EA0226F4A1000157B28 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22086E9E226F4A1000157B28 /* TableViewCell.swift */; };
 		22086EA1226F4A1000157B28 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22086E9F226F4A1000157B28 /* TableViewCell.xib */; };
 		2233341A2274FC440020CDFF /* SubcategoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223334192274FC440020CDFF /* SubcategoryList.swift */; };
+		22333484227C6A400020CDFF /* SubcategoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22333483227C6A400020CDFF /* SubcategoryManager.swift */; };
 		8645A7ED226E497D00BCF038 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8645A7EC226E497D00BCF038 /* AppDelegate.swift */; };
 		8645A7EF226E497D00BCF038 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8645A7EE226E497D00BCF038 /* ViewController.swift */; };
 		8645A7F4226E497F00BCF038 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8645A7F3226E497F00BCF038 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 		22086E9E226F4A1000157B28 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		22086E9F226F4A1000157B28 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		223334192274FC440020CDFF /* SubcategoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryList.swift; sourceTree = "<group>"; };
+		22333483227C6A400020CDFF /* SubcategoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryManager.swift; sourceTree = "<group>"; };
 		8645A7E9226E497D00BCF038 /* itea-ios-products-magazine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "itea-ios-products-magazine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8645A7EC226E497D00BCF038 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8645A7EE226E497D00BCF038 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,14 @@
 			path = SubcategoryList;
 			sourceTree = "<group>";
 		};
+		22333482227C69EB0020CDFF /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				22333483227C6A400020CDFF /* SubcategoryManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		8645A7E0226E497D00BCF038 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +97,7 @@
 		8645A7EB226E497D00BCF038 /* itea-ios-products-magazine */ = {
 			isa = PBXGroup;
 			children = (
+				22333482227C69EB0020CDFF /* Manager */,
 				223334182274FB550020CDFF /* SubcategoryList */,
 				22086E9B226F49BC00157B28 /* Cells */,
 				22086E9A226F49A500157B28 /* Controllers */,
@@ -176,6 +187,7 @@
 				22086EA0226F4A1000157B28 /* TableViewCell.swift in Sources */,
 				2233341A2274FC440020CDFF /* SubcategoryList.swift in Sources */,
 				22086E9D226F49E400157B28 /* TableViewController.swift in Sources */,
+				22333484227C6A400020CDFF /* SubcategoryManager.swift in Sources */,
 				8645A7ED226E497D00BCF038 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

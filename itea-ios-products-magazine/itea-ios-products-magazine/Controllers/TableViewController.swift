@@ -19,21 +19,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     navigationController?.popViewController(animated: true)
     }
     
-    var arraySubcategory1: [SubcategoryList] = []
-    var arraySubcategory2: [SubcategoryList] = []
-    var arraySubcategory3: [SubcategoryList] = []
-    var arraySubcategory4: [SubcategoryList] = []
-    var arraySubcategory5: [SubcategoryList] = []
-    var arraySubcategory6: [SubcategoryList] = []
-    var arraySubcategory7: [SubcategoryList] = []
-    var arraySubcategory8: [SubcategoryList] = []
-    var arraySubcategory9: [SubcategoryList] = []
-    var arraySubcategory10: [SubcategoryList] = []
-    var arraySubcategory11: [SubcategoryList] = []
-    var arraySubcategory12: [SubcategoryList] = []
-    var arraySubcategory13: [SubcategoryList] = []
-    var arraySubcategory14: [SubcategoryList] = []
-    var arraySubcategory15: [SubcategoryList] = []
+    var categoryName: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,37 +35,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         avatarImage.clipsToBounds = true
         avatarImage.layer.cornerRadius = 30
         
-        arraySubcategory1.append(.ikraKrasnaya1)
-        arraySubcategory1.append(.ikraKrasnaya2)
-        arraySubcategory1.append(.ikraKrasnaya3)
-        arraySubcategory2.append(.ikraChernaya1)
-        arraySubcategory3.append(.fish1)
-        arraySubcategory3.append(.fish2)
-        arraySubcategory4.append(.milk1)
-        arraySubcategory4.append(.milk2)
-        arraySubcategory5.append(.cheese1)
-        arraySubcategory5.append(.cheese2)
-        arraySubcategory6.append(.iceCream1)
-        arraySubcategory6.append(.iceCream2)
-        arraySubcategory6.append(.iceCream3)
-        arraySubcategory7.append(.fruit1)
-        arraySubcategory7.append(.fruit2)
-        arraySubcategory8.append(.vegetable1)
-        arraySubcategory8.append(.vegetable2)
-        arraySubcategory8.append(.vegetable3)
-        arraySubcategory9.append(.green1)
-        arraySubcategory9.append(.green2)
-        arraySubcategory10.append(.peanut1)
-        arraySubcategory10.append(.peanut2)
-        arraySubcategory11.append(.chackers1)
-        arraySubcategory12.append(.chips1)
-        arraySubcategory12.append(.chips2)
-        arraySubcategory13.append(.alcohol1)
-        arraySubcategory13.append(.alcohol2)
-        arraySubcategory14.append(.water1)
-        arraySubcategory14.append(.water2)
-        arraySubcategory14.append(.water3)
-        arraySubcategory15.append(.juice1)
+        SubcategoryList.arraySubcategoryAppend()
 
     }
 
@@ -207,4 +163,8 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
         return cell
     }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let vc = storyboard?.instantiateViewController(withIdentifier: "<#T##String#>") as!
+//
+//    }
 }
