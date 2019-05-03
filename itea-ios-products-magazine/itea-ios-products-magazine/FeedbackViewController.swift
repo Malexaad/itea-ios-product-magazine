@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FeedbackViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class FeedbackViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, feedbackCollectionViewCellProtocol {
     
     @IBOutlet weak var userPhotoHeader: UIImageView!
     @IBOutlet weak var headerLabel: UILabel!
@@ -66,8 +66,10 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = collectionView.dequeueReusableCell(withReuseIdentifier: "feedbackCollectionViewCell", for: indexPath) as! feedbackCollectionViewCell
         item.vc = self
+        item.delegate = self
         item.update(feedback: feedbackArray[indexPath.row])
         item.layer.cornerRadius = CGFloat(setCornerRadius())
+        showButtonAddComment(hide: true)
         return item
     }
     
@@ -124,8 +126,14 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
         
     }
     
-    func showButtonAddComment() {
-        leaveFeedback.isHidden = true
+    func showButtonAddComment(hide: Bool) {
+        var needToHide = false
+        for fbItem in feedbackArray {
+            if fbItem.isNewFeedback {
+               needToHide = true
+            }
+        }
+        leaveFeedback.isHidden = needToHide
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {
@@ -137,7 +145,8 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
         if !prodIsEmpty {
             AddComment(comment: "", title: "", raiting: 0, user: fbUser, product: fbProduct, isNewFeedback: true)
             fbCollectoinView.reloadData()
-            showButtonAddComment()
+            scrollToLastRow()
+//            showButtonAddComment(hide: true)
         }
         else {
             Alert().presentWarning(delegate: self, message: "Товар не выбран, комментарий оставить нельзя")
