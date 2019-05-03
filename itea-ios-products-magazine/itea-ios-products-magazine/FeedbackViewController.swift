@@ -23,7 +23,7 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
     var kbWillHide = false
     var keyboardHeight: CGFloat = 0.0
     var collectionViewHeigth: CGFloat = 0.0
-    var collectionViewWidthSize: CGFloat = 0.0
+    var collectionViewYSize: CGFloat = 0.0
     var firstTime = true
     
     
@@ -43,13 +43,13 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         collectionViewHeigth = fbCollectoinView.frame.origin.y
-        collectionViewWidthSize = fbCollectoinView.frame.size.height
+        collectionViewYSize = fbCollectoinView.frame.size.height
         
-        let  fb1 = Feedback(comment: "Гавно", title: "Гавно", raiting: 5, user: user1, product: prod1, isNewFeedback: true)
-        let  fb2 = Feedback(comment: "Гавно", title: "Гавно", raiting: 5, user: user1, product: prod1, isNewFeedback: true)
-        feedbackArray.append(fb1)
-        feedbackArray.append(fb2)
+        AddComment(comment: "Очень неплохо", title: "Хорошо", raiting: 5, user: user1, product: prod1, isNewFeedback: false)
+        AddComment(comment: "Не рекомендую", title: "Отравился", raiting: 2, user: user1, product: prod1, isNewFeedback: false)
     }
+    
+    
     
     func dismissKeyboard() {
         self.view.endEditing(true)
@@ -81,17 +81,15 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
-        //                if !kbWillHide {
+        //                        if !kbWillHide {
         self.animatedTextField(up: true, height: getKeyboardHeight(notification: notification))
         scrollToLastRow()
-        //        kbWillHide = true
-        //                }
+        //                kbWillHide = true
+        //                        }
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
-        //        if !kbWillHide {
         self.animatedTextField(up: false, height: getKeyboardHeight(notification: notification))
-        //        }
     }
     
     func getKeyboardHeight(notification: NSNotification) -> CGFloat {
@@ -116,13 +114,13 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func animatedTextField(up: Bool, height: CGFloat) {
-        let movement = (up ? -height : height)
-        
+        //        let movement = (up ? -height : height)
+        let movement =  -height
         self.fbCollectoinView.frame = CGRect(
             x: self.fbCollectoinView.frame.origin.x,
             y: collectionViewHeigth,
             width: self.fbCollectoinView.frame.size.width,
-            height: collectionViewWidthSize + movement)
+            height: up ? collectionViewYSize + movement : collectionViewYSize)
         
     }
     
