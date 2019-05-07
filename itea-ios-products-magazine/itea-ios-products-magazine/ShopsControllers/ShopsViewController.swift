@@ -23,8 +23,7 @@ class ShopsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let myStoryboard = UIStoryboard(name: "Shops", bundle: nil)
-        let vcForMyStoryboard = myStoryboard.instantiateViewController(withIdentifier: "ShopsViewController") as! ShopsViewController
+        
         
         aroundUserImage()
         
@@ -34,6 +33,8 @@ class ShopsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.delegate = self
         tableView.dataSource = self
         
+        let myStoryboard = UIStoryboard(name: "Shops", bundle: nil)
+        let vcForMyStoryboard = myStoryboard.instantiateViewController(withIdentifier: "ShopsViewController") as! ShopsViewController
         
         let listCell = UINib(nibName: "ListShopsCell", bundle: nil)
         tableView.register(listCell, forCellReuseIdentifier: "ListShopsCell")
