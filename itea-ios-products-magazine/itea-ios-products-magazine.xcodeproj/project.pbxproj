@@ -18,6 +18,12 @@
 		9CC6E3F82275CB19009E6E07 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6E3F72275CB19009E6E07 /* Feedback.swift */; };
 		9CC6E3FA2275CBB0009E6E07 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6E3F92275CBB0009E6E07 /* User.swift */; };
 		9CC6E3FC2279A67B009E6E07 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6E3FB2279A67B009E6E07 /* Alert.swift */; };
+		9CFF9D4322833BAB00FA4D09 /* swipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFF9D4222833BAB00FA4D09 /* swipe.storyboard */; };
+		9CFF9D4522833C0D00FA4D09 /* SwipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFF9D4422833C0D00FA4D09 /* SwipeController.swift */; };
+		9CFF9D47228343CB00FA4D09 /* TapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFF9D46228343CB00FA4D09 /* TapViewController.swift */; };
+		9CFF9D4922834E4400FA4D09 /* classPractice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CFF9D4822834E4400FA4D09 /* classPractice.storyboard */; };
+		9CFF9D4B22834E6F00FA4D09 /* classPracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFF9D4A22834E6F00FA4D09 /* classPracticeViewController.swift */; };
+		9CFF9D4D22835B7500FA4D09 /* GuesterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFF9D4C22835B7500FA4D09 /* GuesterManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +40,12 @@
 		9CC6E3F72275CB19009E6E07 /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
 		9CC6E3F92275CBB0009E6E07 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9CC6E3FB2279A67B009E6E07 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		9CFF9D4222833BAB00FA4D09 /* swipe.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = swipe.storyboard; sourceTree = "<group>"; };
+		9CFF9D4422833C0D00FA4D09 /* SwipeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeController.swift; sourceTree = "<group>"; };
+		9CFF9D46228343CB00FA4D09 /* TapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapViewController.swift; sourceTree = "<group>"; };
+		9CFF9D4822834E4400FA4D09 /* classPractice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = classPractice.storyboard; sourceTree = "<group>"; };
+		9CFF9D4A22834E6F00FA4D09 /* classPracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = classPracticeViewController.swift; sourceTree = "<group>"; };
+		9CFF9D4C22835B7500FA4D09 /* GuesterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuesterManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +84,12 @@
 				9CC6E3E922745D98009E6E07 /* Feedback.storyboard */,
 				9CC6E3F322746B43009E6E07 /* feedbackCollectionViewCell.swift */,
 				9CC6E3EB22745DDF009E6E07 /* FeedbackViewController.swift */,
+				9CFF9D4222833BAB00FA4D09 /* swipe.storyboard */,
+				9CFF9D46228343CB00FA4D09 /* TapViewController.swift */,
+				9CFF9D4422833C0D00FA4D09 /* SwipeController.swift */,
+				9CFF9D4822834E4400FA4D09 /* classPractice.storyboard */,
+				9CFF9D4A22834E6F00FA4D09 /* classPracticeViewController.swift */,
+				9CFF9D4C22835B7500FA4D09 /* GuesterManager.swift */,
 				9CC6E3FB2279A67B009E6E07 /* Alert.swift */,
 				9CC6E3F52275C980009E6E07 /* Product.swift */,
 				9CC6E3F72275CB19009E6E07 /* Feedback.swift */,
@@ -140,6 +158,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CFF9D4922834E4400FA4D09 /* classPractice.storyboard in Resources */,
+				9CFF9D4322833BAB00FA4D09 /* swipe.storyboard in Resources */,
 				8645A7F4226E497F00BCF038 /* Assets.xcassets in Resources */,
 				9CC6E3EA22745D98009E6E07 /* Feedback.storyboard in Resources */,
 			);
@@ -154,13 +174,17 @@
 			files = (
 				9CC6E3FC2279A67B009E6E07 /* Alert.swift in Sources */,
 				9CC6E3F422746B43009E6E07 /* feedbackCollectionViewCell.swift in Sources */,
+				9CFF9D4D22835B7500FA4D09 /* GuesterManager.swift in Sources */,
 				9CC6E3F022745E4C009E6E07 /* rootTableViewController.swift in Sources */,
 				9CC6E3F222745FCB009E6E07 /* rootTableViewCell.swift in Sources */,
+				9CFF9D4B22834E6F00FA4D09 /* classPracticeViewController.swift in Sources */,
 				8645A7ED226E497D00BCF038 /* AppDelegate.swift in Sources */,
 				9CC6E3FA2275CBB0009E6E07 /* User.swift in Sources */,
 				9CC6E3EC22745DDF009E6E07 /* FeedbackViewController.swift in Sources */,
 				9CC6E3F82275CB19009E6E07 /* Feedback.swift in Sources */,
+				9CFF9D4522833C0D00FA4D09 /* SwipeController.swift in Sources */,
 				9CC6E3F62275C980009E6E07 /* Product.swift in Sources */,
+				9CFF9D47228343CB00FA4D09 /* TapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
