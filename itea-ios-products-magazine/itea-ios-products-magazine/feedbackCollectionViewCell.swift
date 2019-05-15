@@ -71,8 +71,8 @@ class feedbackCollectionViewCell: UICollectionViewCell, UITextFieldDelegate  {
     }
     
     func fillFeedback() {
-        userPhoto.image = UIImage(named: fb?.user?.userPhoto ?? defaultPicture)
-        userNameField.text = fb?.user?.userName ?? defaultName
+        userPhoto.image =  fb?.user?.userFoto //UIImage(named: fb?.user?.userPhoto ?? defaultPicture)
+        userNameField.text = fb?.user?.username ?? defaultName
         dateLabel.text = fb?.date ?? ""
         commentNameField.text = fb?.title ?? "Нет комментария"
         comment.text = fb?.comment ?? ""

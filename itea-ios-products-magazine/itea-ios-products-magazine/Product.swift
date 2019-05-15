@@ -8,11 +8,23 @@
 
 import UIKit
 
-class Product: NSObject {
-    
-    var prodName = "Имя не задано"
+//class Product: NSObject {
+//
+//    var prodName = "Имя не задано"
+//
+//    init(name: String) {
+//        prodName = name
+//    }
+//}
 
-    init(name: String) {
-        prodName = name
+class Item {
+    
+    var name = ""
+    var feedbackArray: [Feedback]?
+    
+    init(name: String, feedbackArray: [Feedback]?) {
+      self.name = name
+      self.feedbackArray = feedbackArray
     }
+    
 }

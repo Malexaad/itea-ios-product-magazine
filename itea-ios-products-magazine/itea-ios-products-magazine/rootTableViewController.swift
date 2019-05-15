@@ -8,8 +8,8 @@
 
 import UIKit
 
-let  prod1 = Product(name: "Чипсы Lays c беконом")
-let  user1 = User(userName: "Анатолич", userPhoto: "anatolii")
+let  prod1 = Item(name: "Чипсы Lays c беконом", feedbackArray: nil)
+let  user1 = UserInfoModel(username: "Анатолич", userFoto: UIImage(named: "anatolii")!)
 
 class rootTableViewController: UITableViewController {
 

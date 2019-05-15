@@ -15,9 +15,10 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var fbCollectoinView: UICollectionView!
     @IBOutlet weak var leaveFeedback: UIButton!
     
-    
-    var fbUser: User?
-    var fbProduct: Product?
+    var fbUser: UserInfoModel?
+    var fbProduct: Item?
+//    var fbUser: User?
+//    var fbProduct: Product?
     var feedbackArray: [Feedback] = []
     
     var kbWillHide = false
@@ -35,8 +36,8 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         self.navigationController?.isNavigationBarHidden = true
         
-        userPhotoHeader.image = UIImage(named: fbUser?.userPhoto ?? defaultPicture)
-        headerLabel.text = fbProduct?.prodName ?? defaultProdName
+        userPhotoHeader.image =  fbUser?.userFoto //UIImage(named: fbUser?.userFoto ?? defaultPicture)
+        headerLabel.text = fbProduct?.name ?? defaultProdName
         userPhotoHeader.layer.cornerRadius = CGFloat(userPhotoHeader.bounds.width/2)
         leaveFeedback.layer.cornerRadius = CGFloat(setCornerRadius())
         
@@ -78,7 +79,7 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
     //        fbProduct = product
     //    }
     
-    func AddComment(comment: String, title: String, raiting: Int, user: User?, product: Product?, isNewFeedback: Bool) {
+    func AddComment(comment: String, title: String, raiting: Int, user: UserInfoModel?, product: Item?, isNewFeedback: Bool) {
         feedbackArray.append(Feedback(comment: comment, title: title, raiting: raiting, user: user, product: product, isNewFeedback: isNewFeedback))
     }
     

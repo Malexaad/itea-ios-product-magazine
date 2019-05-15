@@ -17,14 +17,14 @@ class Feedback: NSObject {
     var title = ""
     var date = ""
     var raiting = 0
-    var user: User?
-    var product: Product?
+    var user: UserInfoModel?
+    var product: Item?
     var isNewFeedback = false
     
     var defaultComment = "Здесь пока никто ничего не писал..."
     var defaultTitle = "Нет отзыва"
     
-    init(comment: String, title: String, raiting: Int, user: User?, product: Product?, isNewFeedback: Bool) {
+    init(comment: String, title: String, raiting: Int, user: UserInfoModel?, product: Item?, isNewFeedback: Bool) {
         
         let timestamp: NSNumber = NSNumber(value: Int(NSDate().timeIntervalSince1970))
         let seconds = timestamp.doubleValue
@@ -33,8 +33,9 @@ class Feedback: NSObject {
         dateFormatter.dateFormat = "dd.MM.yyyy HH:mm"
         self.date = dateFormatter.string(from: timestampDate as Date)
         
-        let defaultUser = User(userName: defaultName, userPhoto: defaultPicture)
-        let defaultProduct = Product(name: defaultProdName)
+        let defaultUser = UserInfoModel(username: defaultName, userFoto: UIImage(named: defaultPicture)!)
+        let defaultFbArray: [Feedback] = []
+        let defaultProduct = Item(name: defaultProdName, feedbackArray: defaultFbArray)
         self.comment = comment == "" ? defaultComment : comment
         self.title = title == "" ? defaultTitle : title
         self.raiting = raiting
