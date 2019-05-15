@@ -31,7 +31,7 @@ class feedbackCollectionViewCell: UICollectionViewCell, UITextFieldDelegate  {
     
     var fb: Feedback?
     var raitingStarArray: [UIImageView] = []
-    var vc: UIViewController?
+//    var vc: UIViewController?
     
     func update(feedback: Feedback) {
         fb = feedback
@@ -106,7 +106,7 @@ class feedbackCollectionViewCell: UICollectionViewCell, UITextFieldDelegate  {
             alertMessage.append("\n Заполните рейтинг звездочками")
         }
         if !allFieldsFilled {
-            Alert().presentWarning(delegate: vc!, message: alertMessage)
+            Alert().presentWarning(delegate: delegate as! UIViewController, message: alertMessage)
         }
         return allFieldsFilled
     }
@@ -147,6 +147,9 @@ class feedbackCollectionViewCell: UICollectionViewCell, UITextFieldDelegate  {
         let ok = checkFields()
         if ok {
             editingFields(canBeEdited: false)
+            fb?.user?.username = userNameField.text!
+            fb?.title = commentNameField.text!
+            fb?.comment = comment.text!
             fb?.isNewFeedback = false
             delegate?.showButtonAddComment(hide: false)
         }

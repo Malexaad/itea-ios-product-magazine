@@ -12,8 +12,6 @@
 		9C61C5DD228BE06F000A192F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C61C5DC228BE06E000A192F /* AppDelegate.swift */; };
 		9CC6E3EA22745D98009E6E07 /* Feedback.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC6E3E922745D98009E6E07 /* Feedback.storyboard */; };
 		9CC6E3EC22745DDF009E6E07 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6E3EB22745DDF009E6E07 /* FeedbackViewController.swift */; };
-		9CC6E3F022745E4C009E6E07 /* rootTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6E3EF22745E4C009E6E07 /* rootTableViewController.swift */; };
-		9CC6E3F222745FCB009E6E07 /* rootTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6E3F122745FCB009E6E07 /* rootTableViewCell.swift */; };
 		9CC6E3F422746B43009E6E07 /* feedbackCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6E3F322746B43009E6E07 /* feedbackCollectionViewCell.swift */; };
 		9CC6E3F62275C980009E6E07 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6E3F52275C980009E6E07 /* Product.swift */; };
 		9CC6E3F82275CB19009E6E07 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC6E3F72275CB19009E6E07 /* Feedback.swift */; };
@@ -28,8 +26,6 @@
 		9C61C5DC228BE06E000A192F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CC6E3E922745D98009E6E07 /* Feedback.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feedback.storyboard; sourceTree = "<group>"; };
 		9CC6E3EB22745DDF009E6E07 /* FeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
-		9CC6E3EF22745E4C009E6E07 /* rootTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rootTableViewController.swift; sourceTree = "<group>"; };
-		9CC6E3F122745FCB009E6E07 /* rootTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rootTableViewCell.swift; sourceTree = "<group>"; };
 		9CC6E3F322746B43009E6E07 /* feedbackCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = feedbackCollectionViewCell.swift; sourceTree = "<group>"; };
 		9CC6E3F52275C980009E6E07 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		9CC6E3F72275CB19009E6E07 /* Feedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
@@ -66,8 +62,6 @@
 		8645A7EB226E497D00BCF038 /* itea-ios-products-magazine */ = {
 			isa = PBXGroup;
 			children = (
-				9CC6E3EF22745E4C009E6E07 /* rootTableViewController.swift */,
-				9CC6E3F122745FCB009E6E07 /* rootTableViewCell.swift */,
 				9CC6E3E922745D98009E6E07 /* Feedback.storyboard */,
 				9C61C5DA228B6B33000A192F /* UserInfoModel.swift */,
 				9CC6E3F322746B43009E6E07 /* feedbackCollectionViewCell.swift */,
@@ -154,9 +148,7 @@
 			files = (
 				9CC6E3FC2279A67B009E6E07 /* Alert.swift in Sources */,
 				9CC6E3F422746B43009E6E07 /* feedbackCollectionViewCell.swift in Sources */,
-				9CC6E3F022745E4C009E6E07 /* rootTableViewController.swift in Sources */,
 				9C61C5DD228BE06F000A192F /* AppDelegate.swift in Sources */,
-				9CC6E3F222745FCB009E6E07 /* rootTableViewCell.swift in Sources */,
 				9C61C5DB228B6B33000A192F /* UserInfoModel.swift in Sources */,
 				9CC6E3EC22745DDF009E6E07 /* FeedbackViewController.swift in Sources */,
 				9CC6E3F82275CB19009E6E07 /* Feedback.swift in Sources */,
