@@ -19,7 +19,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     navigationController?.popViewController(animated: true)
     }
     var categoryName: Int?
-   // var categoryName = 3
+   //var categoryName = 4
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -128,7 +128,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         default:
            break
         }
-        return categoryName
+        return categoryName!
     }
     
     
@@ -197,9 +197,11 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
             if indexPath.section == 1 {
                 cell.update(type: arraySubcategory2[indexPath.row])
-            } else {
+            }
+            if indexPath.section == 2 {
                 cell.update(type: arraySubcategory3[indexPath.row])
             }
+            
         case 1:
             if indexPath.section == 0 {
                 cell.update(type: arraySubcategory4[indexPath.row])
@@ -219,7 +221,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
             if indexPath.section == 2 {
                 cell.update(type: arraySubcategory9[indexPath.row])
             }
-            else {
+            if indexPath.section == 3 {
                 cell.update(type: arraySubcategory10[indexPath.row])
             }
         case 3:
@@ -235,7 +237,8 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
             if indexPath.section == 1 {
                 cell.update(type: arraySubcategory14[indexPath.row])
-            } else {
+            }
+            if indexPath.section == 2 {
                 cell.update(type: arraySubcategory15[indexPath.row])
             }
         default:
