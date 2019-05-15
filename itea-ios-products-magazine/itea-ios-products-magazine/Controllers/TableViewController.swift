@@ -18,8 +18,8 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     @IBAction func back(_ sender: Any) {
     navigationController?.popViewController(animated: true)
     }
-    
     var categoryName: Int?
+   // var categoryName = 3
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,21 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         avatarImage.layer.cornerRadius = 30
         
         SubcategoryList.arraySubcategoryAppend()
-
+        tableView.reloadData()
+        switch categoryName {
+        case 0:
+            nameCategory.text = "Морепродукты"
+        case 1:
+            nameCategory.text = "Молочные продукты"
+        case 2:
+            nameCategory.text = "Овощи, фрукты"
+        case 3:
+            nameCategory.text = "Снеки"
+        case 4:
+            nameCategory.text = "Напитки"
+        default:
+            nameCategory.text = "No name"
+        }
     }
 
     
@@ -114,7 +128,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         default:
            break
         }
-        return categoryName!
+        return categoryName
     }
     
     
