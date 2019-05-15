@@ -17,8 +17,7 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     var fbUser: UserInfoModel?
     var fbProduct: Item?
-    //    var fbUser: User?
-    //    var fbProduct: Product?
+
     var feedbackArray: [Feedback] = []
     
     var kbWillHide = false
@@ -36,7 +35,7 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         self.navigationController?.isNavigationBarHidden = true
         
-        userPhotoHeader.image =  fbUser?.userFoto ?? UIImage(named: defaultPicture) //UIImage(named: fbUser?.userFoto ?? defaultPicture)
+        userPhotoHeader.image =  fbUser?.userFoto ?? UIImage(named: defaultPicture)
         headerLabel.text = fbProduct?.name ?? defaultProdName
         userPhotoHeader.layer.cornerRadius = CGFloat(userPhotoHeader.bounds.width/2)
         leaveFeedback.layer.cornerRadius = CGFloat(setCornerRadius())
@@ -48,8 +47,6 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         fillManager()
     }
-    
-    
     
     func dismissKeyboard() {
         self.view.endEditing(true)
@@ -65,9 +62,7 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = collectionView.dequeueReusableCell(withReuseIdentifier: "feedbackCollectionViewCell", for: indexPath) as! feedbackCollectionViewCell
-//        item.vc = self
         item.delegate = self
-//        item.update(feedback: feedbackArray[indexPath.row])
         item.update(feedback: (fbProduct?.feedbackArray?[indexPath.row])!)
         item.layer.cornerRadius = CGFloat(setCornerRadius())
         showButtonAddComment(hide: true)
@@ -83,10 +78,10 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
             fbUser = UserInfoModel(username: defaultName, userFoto: UIImage(named: defaultPicture)!)
         }
         feedbackArray = fbProduct?.feedbackArray ?? currFbArray
-//        AddComment(comment: "Очень неплохо", title: "Хорошо", raiting: 5, user: fbUser, product: fbProduct, isNewFeedback: false)
-//        AddComment(comment: "Не рекомендую", title: "Отравился", raiting: 2, user: fbUser, product: fbProduct, isNewFeedback: false)
+        //        AddComment(comment: "Очень неплохо", title: "Хорошо", raiting: 5, user: fbUser, product: fbProduct, isNewFeedback: false)
+        //        AddComment(comment: "Не рекомендую", title: "Отравился", raiting: 2, user: fbUser, product: fbProduct, isNewFeedback: false)
     }
-
+    
     func AddComment(comment: String, title: String, raiting: Int, user: UserInfoModel?, product: Item?, isNewFeedback: Bool) {
         fbProduct?.feedbackArray?.append(Feedback(comment: comment, title: title, raiting: raiting, user: user, product: product, isNewFeedback: isNewFeedback))
         fillManager()
@@ -123,7 +118,6 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func animatedTextField(up: Bool, height: CGFloat) {
-        //        let movement = (up ? -height : height)
         let movement =  -height
         self.fbCollectoinView.frame = CGRect(
             x: self.fbCollectoinView.frame.origin.x,
@@ -153,7 +147,6 @@ class FeedbackViewController: UIViewController, UICollectionViewDelegate, UIColl
             AddComment(comment: "", title: "", raiting: 0, user: fbUser, product: fbProduct, isNewFeedback: true)
             fbCollectoinView.reloadData()
             scrollToLastRow()
-            //            showButtonAddComment(hide: true)
         }
         else {
             Alert().presentWarning(delegate: self, message: "Товар не выбран, комментарий оставить нельзя")

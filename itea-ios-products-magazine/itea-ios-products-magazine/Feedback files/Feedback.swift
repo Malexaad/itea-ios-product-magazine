@@ -22,7 +22,7 @@ class Feedback: NSObject {
     var isNewFeedback = false
     
     var defaultComment = "Здесь пока никто ничего не писал..."
-    var defaultTitle = "Нет отзыва"
+    var defaultTitle = "Заголовок"
     
     init(comment: String, title: String, raiting: Int, user: UserInfoModel?, product: Item?, isNewFeedback: Bool) {
         

@@ -31,7 +31,6 @@ class feedbackCollectionViewCell: UICollectionViewCell, UITextFieldDelegate  {
     
     var fb: Feedback?
     var raitingStarArray: [UIImageView] = []
-//    var vc: UIViewController?
     
     func update(feedback: Feedback) {
         fb = feedback
@@ -51,22 +50,13 @@ class feedbackCollectionViewCell: UICollectionViewCell, UITextFieldDelegate  {
         
         if canBeEdited {
             let color = UIColor.lightGray
-//            if  userIsEmpty { //CE522B
-//                userNameField.backgroundColor = color
-//                userNameField.becomeFirstResponder()
-//            }
-//            else {
-//                commentNameField.becomeFirstResponder()
-//            }
             comment.becomeFirstResponder()
             commentNameField.backgroundColor = color
             comment.backgroundColor = color
-//            delegate?.showButtonAddComment(hide: true)
         }
         else {
             commentNameField.backgroundColor = self.backgroundColor
             comment.backgroundColor = self.backgroundColor
-//            delegate?.showButtonAddComment(hide: false)
         }
     }
     
