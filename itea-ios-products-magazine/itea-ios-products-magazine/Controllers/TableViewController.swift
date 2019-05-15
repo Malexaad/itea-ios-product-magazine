@@ -19,7 +19,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     navigationController?.popViewController(animated: true)
     }
     
-    var categoryName: [String] = []
+    var categoryName: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,124 +45,190 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 15
+        switch categoryName {
+        case 0:
+            return 3
+        case 1:
+            return 3
+        case 2:
+            return 4
+        case 3:
+            return 2
+        case 4:
+            return 3
+        default:
+            return 15
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
+        switch categoryName {
         case 0:
-            return arraySubcategory1.count
+            //var index = section
+            if section == 0 {
+                return arraySubcategory1.count
+            }
+            if section == 1 {
+              return arraySubcategory2.count
+            } else {
+              return arraySubcategory3.count
+            }
         case 1:
-            return arraySubcategory2.count
+            if section == 0 {
+                return arraySubcategory4.count
+            }
+            if section == 1 {
+                return arraySubcategory5.count
+            } else {
+                return arraySubcategory6.count
+            }
         case 2:
-            return arraySubcategory3.count
+            if section == 0 {
+                return arraySubcategory7.count
+            }
+            if section == 1 {
+                return arraySubcategory8.count
+            }
+            if section == 2 {
+                return arraySubcategory9.count
+            }
+            else {
+                return arraySubcategory10.count
+            }
         case 3:
-            return arraySubcategory4.count
+            if section == 0 {
+                return arraySubcategory11.count
+            }
+            if section == 1 {
+                return arraySubcategory12.count
+            }
         case 4:
-            return arraySubcategory5.count
-        case 5:
-            return arraySubcategory6.count
-        case 6:
-            return arraySubcategory7.count
-        case 7:
-            return arraySubcategory8.count
-        case 8:
-            return arraySubcategory9.count
-        case 9:
-            return arraySubcategory10.count
-        case 10:
-            return arraySubcategory11.count
-        case 11:
-            return arraySubcategory12.count
-        case 12:
-            return arraySubcategory13.count
-        case 13:
-            return arraySubcategory14.count
-        case 14:
-            return arraySubcategory15.count
+            if section == 0 {
+                return arraySubcategory13.count
+            }
+            if section == 1 {
+                return arraySubcategory14.count
+            } else {
+                return arraySubcategory15.count
+            }
         default:
-            return 1
-     }
-        
+           break
+        }
+        return categoryName!
     }
     
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        switch section {
+        switch categoryName {
         case 0:
-            return "Икра красная"
+            if section == 0 {
+                return "Икра красная"
+            }
+            if section == 1 {
+                return "Икра черная"
+            } else {
+                return "Красная рыба"
+            }
         case 1:
-            return "Икра черная"
+            if section == 0 {
+                return "Молоко"
+            }
+            if section == 1 {
+                return "Сыры"
+            } else {
+                return "Мороженое"
+            }
         case 2:
-            return "Красная рыба"
+            if section == 0 {
+                return "Фрукты"
+            }
+            if section == 1 {
+                return "Овощи"
+            }
+            if section == 2 {
+                return "Зелень"
+            }
+            else {
+                return "Орехи"
+            }
         case 3:
-            return "Молоко"
+            if section == 0 {
+                return "Сухарики"
+            }
+            if section == 1 {
+                return "Чипсы"
+            }
         case 4:
-            return "Сыры"
-        case 5:
-            return "Мороженое"
-        case 6:
-            return "Фрукты"
-        case 7:
-            return "Овощи"
-        case 8:
-            return "Зелень"
-        case 9:
-            return "Орехи"
-        case 10:
-            return "Сухарики"
-        case 11:
-            return "Чипсы"
-        case 12:
-            return "Алкоголь"
-        case 13:
-            return "Вода"
-        case 14:
-            return "Соки"
+            if section == 0 {
+                return "Алкоголь"
+            }
+            if section == 1 {
+                return "Вода"
+            } else {
+                return "Соки"
+            }
         default:
             break
         }
-        return "No name"
+    return "No name"
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
-        switch indexPath.section {
+        switch categoryName {
         case 0:
-        cell.update(type: arraySubcategory1[indexPath.row])
+            //var index = section
+            if indexPath.section == 0 {
+                cell.update(type: arraySubcategory1[indexPath.row])
+            }
+            if indexPath.section == 1 {
+                cell.update(type: arraySubcategory2[indexPath.row])
+            } else {
+                cell.update(type: arraySubcategory3[indexPath.row])
+            }
         case 1:
-         cell.update(type: arraySubcategory2[indexPath.row])
+            if indexPath.section == 0 {
+                cell.update(type: arraySubcategory4[indexPath.row])
+            }
+            if indexPath.section == 1 {
+                cell.update(type: arraySubcategory5[indexPath.row])
+            } else {
+                cell.update(type: arraySubcategory6[indexPath.row])
+            }
         case 2:
-        cell.update(type: arraySubcategory3[indexPath.row])
+            if indexPath.section == 0 {
+                cell.update(type: arraySubcategory7[indexPath.row])
+            }
+            if indexPath.section == 1 {
+                cell.update(type: arraySubcategory8[indexPath.row])
+            }
+            if indexPath.section == 2 {
+                cell.update(type: arraySubcategory9[indexPath.row])
+            }
+            else {
+                cell.update(type: arraySubcategory10[indexPath.row])
+            }
         case 3:
-        cell.update(type: arraySubcategory4[indexPath.row])
+            if indexPath.section == 0 {
+                cell.update(type: arraySubcategory11[indexPath.row])
+            }
+            if indexPath.section == 1 {
+                cell.update(type: arraySubcategory12[indexPath.row])
+            }
         case 4:
-        cell.update(type: arraySubcategory5[indexPath.row])
-        case 5:
-        cell.update(type: arraySubcategory6[indexPath.row])
-        case 6:
-        cell.update(type: arraySubcategory7[indexPath.row])
-        case 7:
-        cell.update(type: arraySubcategory8[indexPath.row])
-        case 8:
-        cell.update(type: arraySubcategory9[indexPath.row])
-        case 9:
-        cell.update(type: arraySubcategory10[indexPath.row])
-        case 10:
-        cell.update(type: arraySubcategory11[indexPath.row])
-        case 11:
-        cell.update(type: arraySubcategory12[indexPath.row])
-        case 12:
-        cell.update(type: arraySubcategory13[indexPath.row])
-        case 13:
-        cell.update(type: arraySubcategory14[indexPath.row])
-        case 14:
-        cell.update(type: arraySubcategory15[indexPath.row])
+            if indexPath.section == 0 {
+                cell.update(type: arraySubcategory13[indexPath.row])
+            }
+            if indexPath.section == 1 {
+                cell.update(type: arraySubcategory14[indexPath.row])
+            } else {
+                cell.update(type: arraySubcategory15[indexPath.row])
+            }
         default:
             break
         }
         return cell
-    }
+        }
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        let vc = storyboard?.instantiateViewController(withIdentifier: "<#T##String#>") as!
 //
