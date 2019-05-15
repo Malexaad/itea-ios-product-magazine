@@ -14,10 +14,10 @@ class LoginDictManager {
     
     init() {
         logPassDict.append(UserDictModel(foto: UIImage(imageLiteralResourceName: "malex-image"), password: "qwerty" , userName: "malex"))
-        logPassDict.append(UserDictModel(foto: UIImage(imageLiteralResourceName: "lilia-image"), password: "12345" , userName: "lili"))
-        logPassDict.append(UserDictModel(foto: UIImage(imageLiteralResourceName: "mol-image"), password: "qazwsx" , userName: "mol"))
+        logPassDict.append(UserDictModel(foto: UIImage(imageLiteralResourceName: "Lilia-image"), password: "12345" , userName: "lili"))
+        logPassDict.append(UserDictModel(foto: UIImage(imageLiteralResourceName: "Mol-image"), password: "qazwsx" , userName: "mol"))
         logPassDict.append(UserDictModel(foto: UIImage(imageLiteralResourceName: "viacheslav-image"), password: "asdfgh" , userName: "viacheslav"))
-        logPassDict.append(UserDictModel(foto: UIImage(imageLiteralResourceName: "vitalik-image"), password: "zxcvbn" , userName: "vitalik"))
+        logPassDict.append(UserDictModel(foto: UIImage(imageLiteralResourceName: "Vitalik-image"), password: "zxcvbn" , userName: "vitalik"))
         logPassDict.append(UserDictModel(foto: UIImage(imageLiteralResourceName: "tor-image"), password: "qwerty123" , userName:"tor"))
         logPassDict.append(UserDictModel(foto: UIImage(imageLiteralResourceName: "default-image"), password: "asd123" , userName: "daniel"))
         logPassDict.append(UserDictModel(foto: UIImage(imageLiteralResourceName: "kiril-image"), password: "rfvtgb" , userName: "kiril"))

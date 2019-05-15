@@ -7,7 +7,6 @@
 //
 import Foundation
 import UIKit
-import SwiftGifOrigin
 
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
@@ -32,7 +31,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var loginView: UIView!
     @IBOutlet var loginPassView: UIImageView!
     @IBOutlet var regViewButton: UIButton!
-    
+    var loginDictManager = LoginDictManager()
     var loginPassDict : [UserDictModel]?
     var userInfo : UserInfoModel?
     override func viewDidLoad() {
@@ -111,10 +110,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
          access = CheckLoginPass(username: usernameTextField.text!,password: passwordTextField.text!)
         }
         if(access) {
-            //let storyboard = UIStoryboard(name: " ", bundle: nil)
-            //let vc = storyboard.instantiateViewController(withIdentifier: " ") as! 
-            //vc.present(vc, animated: true, completion: nil)
-            print("Acces OK!")
+            let storyboard = UIStoryboard(name: "Shops", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "ShopsViewController") as! ShopsViewController
+            vc.avatarUser = userInfo?.userFoto
+            vc.nameUser = userInfo!.username
+            navigationController?.present(vc, animated: true, completion: nil)
         }
         else {
             Alert(errorCode: 4)
@@ -132,7 +132,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func retrievePeople() -> [UserDictModel]? {
         if let unarchivedObject = UserDefaults.standard.object(forKey: "LogDictionary") as? NSData {
-            return NSKeyedUnarchiver.unarchiveObject(with: unarchivedObject as Data) as? [UserDictModel]
+            let rr = NSKeyedUnarchiver.unarchiveObject(with: unarchivedObject as Data) as! [UserDictModel]
+            return rr
         }
         return nil
     }

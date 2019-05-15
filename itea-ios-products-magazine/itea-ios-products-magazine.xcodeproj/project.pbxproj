@@ -16,6 +16,11 @@
 		8645A80B226EE80600BCF038 /* LoginsDictManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8645A80A226EE80600BCF038 /* LoginsDictManager.swift */; };
 		8645A812226F06B400BCF038 /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8645A811226F06B400BCF038 /* UserInfoModel.swift */; };
 		8645A81D226F13EC00BCF038 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8645A81C226F13EC00BCF038 /* LaunchView.swift */; };
+		86B2550B228C7A4700895B29 /* Shops.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86B2550A228C7A4700895B29 /* Shops.storyboard */; };
+		86B2550D228C7A4F00895B29 /* ShopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2550C228C7A4F00895B29 /* ShopsViewController.swift */; };
+		86B2550F228C7A6500895B29 /* ShopsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2550E228C7A6500895B29 /* ShopsType.swift */; };
+		86B25513228C7AF800895B29 /* ListShopsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B25511228C7AF800895B29 /* ListShopsCell.swift */; };
+		86B25514228C7AF800895B29 /* ListShopsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86B25512228C7AF800895B29 /* ListShopsCell.xib */; };
 		86D85D8F2277569000ACC476 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D85D8E2277569000ACC476 /* RegisterViewController.swift */; };
 		F1CDBBE3C5A67A36BFD94F44 /* Pods_itea_ios_products_magazine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA19BB1F514E28C917FEC308 /* Pods_itea_ios_products_magazine.framework */; };
 /* End PBXBuildFile section */
@@ -32,6 +37,11 @@
 		8645A80A226EE80600BCF038 /* LoginsDictManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginsDictManager.swift; sourceTree = "<group>"; };
 		8645A811226F06B400BCF038 /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
 		8645A81C226F13EC00BCF038 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		86B2550A228C7A4700895B29 /* Shops.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Shops.storyboard; sourceTree = "<group>"; };
+		86B2550C228C7A4F00895B29 /* ShopsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopsViewController.swift; sourceTree = "<group>"; };
+		86B2550E228C7A6500895B29 /* ShopsType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopsType.swift; sourceTree = "<group>"; };
+		86B25511228C7AF800895B29 /* ListShopsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListShopsCell.swift; sourceTree = "<group>"; };
+		86B25512228C7AF800895B29 /* ListShopsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListShopsCell.xib; sourceTree = "<group>"; };
 		86D85D8E2277569000ACC476 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		CA19BB1F514E28C917FEC308 /* Pods_itea_ios_products_magazine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itea_ios_products_magazine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8920B4B2A565131614A6C7 /* Pods-itea-ios-products-magazine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itea-ios-products-magazine.debug.xcconfig"; path = "Target Support Files/Pods-itea-ios-products-magazine/Pods-itea-ios-products-magazine.debug.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +98,7 @@
 		8645A7EB226E497D00BCF038 /* itea-ios-products-magazine */ = {
 			isa = PBXGroup;
 			children = (
+				86B25510228C7AE900895B29 /* Cell */,
 				8645A817226F0DD800BCF038 /* View */,
 				8645A809226EE7EE00BCF038 /* Managers */,
 				8645A804226E5D2700BCF038 /* Models */,
@@ -104,6 +115,7 @@
 		8645A800226E5CFA00BCF038 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				86B2550A228C7A4700895B29 /* Shops.storyboard */,
 				8645A801226E5D1400BCF038 /* Login.storyboard */,
 			);
 			path = Storyboards;
@@ -112,6 +124,7 @@
 		8645A803226E5D1D00BCF038 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				86B2550C228C7A4F00895B29 /* ShopsViewController.swift */,
 				8645A805226E5D4900BCF038 /* LoginViewController.swift */,
 				86D85D8E2277569000ACC476 /* RegisterViewController.swift */,
 			);
@@ -123,6 +136,7 @@
 			children = (
 				8645A807226E5D6D00BCF038 /* UsersDictModel.swift */,
 				8645A811226F06B400BCF038 /* UserInfoModel.swift */,
+				86B2550E228C7A6500895B29 /* ShopsType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -141,6 +155,15 @@
 				8645A81C226F13EC00BCF038 /* LaunchView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		86B25510228C7AE900895B29 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				86B25511228C7AF800895B29 /* ListShopsCell.swift */,
+				86B25512228C7AF800895B29 /* ListShopsCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,6 +226,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86B25514228C7AF800895B29 /* ListShopsCell.xib in Resources */,
+				86B2550B228C7A4700895B29 /* Shops.storyboard in Resources */,
 				8645A7F7226E497F00BCF038 /* LaunchScreen.storyboard in Resources */,
 				8645A7F4226E497F00BCF038 /* Assets.xcassets in Resources */,
 				8645A802226E5D1400BCF038 /* Login.storyboard in Resources */,
@@ -263,6 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86B2550D228C7A4F00895B29 /* ShopsViewController.swift in Sources */,
+				86B2550F228C7A6500895B29 /* ShopsType.swift in Sources */,
 				8645A806226E5D4900BCF038 /* LoginViewController.swift in Sources */,
 				8645A81D226F13EC00BCF038 /* LaunchView.swift in Sources */,
 				86D85D8F2277569000ACC476 /* RegisterViewController.swift in Sources */,
@@ -270,6 +297,7 @@
 				8645A7ED226E497D00BCF038 /* AppDelegate.swift in Sources */,
 				8645A808226E5D6D00BCF038 /* UsersDictModel.swift in Sources */,
 				8645A812226F06B400BCF038 /* UserInfoModel.swift in Sources */,
+				86B25513228C7AF800895B29 /* ListShopsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
