@@ -58,9 +58,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //let vc = storyboard?.instantiateViewController(withIdentifier: "TableViewController") as! TableViewController
-        //vc.categoryName = ItemType.returnNameType(type: arrayList[indexPath.row])
-        //self.navigationController?.pushViewController(vc, animated: true)
+        let storyboard = UIStoryboard(name: "Subcategory", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "TableViewController") as! TableViewController
+        vc.categoryName = indexPath.row
+        vc.userAvatarImage = userImage.image
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

@@ -51,12 +51,6 @@ class ShopsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.reloadData()
     }
     
-    
-//    func storyboard() {
-//        let myStoryboard = UIStoryboard(name: "Shops", bundle: nil)
-//        let vcForMyStoryboard = myStoryboard.instantiateViewController(withIdentifier: "ShopsViewController") as! ShopsViewController
-//    }
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -77,18 +71,15 @@ class ShopsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-       /* let vc = storyboard?.instantiateViewController(withIdentifier: "Categories") as! Categories
+        let nextstoryboard = UIStoryboard(name: "Category", bundle: nil)
+        let vc = nextstoryboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
         vc.shopName = ShopsType.returnNameType(type: arrayTypes[indexPath.row])
         vc.userImageName = avatarUser
-        navigationController?.pushViewController(vc, animated: true)
- */
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    
-    
-    
     @IBAction func didTapBackButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
     
     func aroundUserImage() {

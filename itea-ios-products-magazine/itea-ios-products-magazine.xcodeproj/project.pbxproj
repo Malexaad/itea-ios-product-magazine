@@ -21,6 +21,17 @@
 		86B2550F228C7A6500895B29 /* ShopsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2550E228C7A6500895B29 /* ShopsType.swift */; };
 		86B25513228C7AF800895B29 /* ListShopsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B25511228C7AF800895B29 /* ListShopsCell.swift */; };
 		86B25514228C7AF800895B29 /* ListShopsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86B25512228C7AF800895B29 /* ListShopsCell.xib */; };
+		86B25516228C88B600895B29 /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B25515228C88B600895B29 /* CategoryController.swift */; };
+		86B25519228C88D400895B29 /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86B25517228C88D400895B29 /* ListCell.xib */; };
+		86B2551A228C88D400895B29 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B25518228C88D400895B29 /* ListCell.swift */; };
+		86B2551C228C88E400895B29 /* ItemsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2551B228C88E400895B29 /* ItemsList.swift */; };
+		86B2551E228C894D00895B29 /* Category.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86B2551D228C894D00895B29 /* Category.storyboard */; };
+		86B255202291712700895B29 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2551F2291712700895B29 /* TableViewController.swift */; };
+		86B255232291713D00895B29 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B255212291713D00895B29 /* TableViewCell.swift */; };
+		86B255242291713D00895B29 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86B255222291713D00895B29 /* TableViewCell.xib */; };
+		86B255262291714700895B29 /* SubcategoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B255252291714600895B29 /* SubcategoryManager.swift */; };
+		86B255282291714F00895B29 /* SubcategoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B255272291714F00895B29 /* SubcategoryList.swift */; };
+		86B2552A2291715800895B29 /* Subcategory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86B255292291715800895B29 /* Subcategory.storyboard */; };
 		86D85D8F2277569000ACC476 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D85D8E2277569000ACC476 /* RegisterViewController.swift */; };
 		F1CDBBE3C5A67A36BFD94F44 /* Pods_itea_ios_products_magazine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA19BB1F514E28C917FEC308 /* Pods_itea_ios_products_magazine.framework */; };
 /* End PBXBuildFile section */
@@ -42,6 +53,17 @@
 		86B2550E228C7A6500895B29 /* ShopsType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopsType.swift; sourceTree = "<group>"; };
 		86B25511228C7AF800895B29 /* ListShopsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListShopsCell.swift; sourceTree = "<group>"; };
 		86B25512228C7AF800895B29 /* ListShopsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListShopsCell.xib; sourceTree = "<group>"; };
+		86B25515228C88B600895B29 /* CategoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
+		86B25517228C88D400895B29 /* ListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
+		86B25518228C88D400895B29 /* ListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		86B2551B228C88E400895B29 /* ItemsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsList.swift; sourceTree = "<group>"; };
+		86B2551D228C894D00895B29 /* Category.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Category.storyboard; sourceTree = "<group>"; };
+		86B2551F2291712700895B29 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		86B255212291713D00895B29 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		86B255222291713D00895B29 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		86B255252291714600895B29 /* SubcategoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubcategoryManager.swift; sourceTree = "<group>"; };
+		86B255272291714F00895B29 /* SubcategoryList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubcategoryList.swift; sourceTree = "<group>"; };
+		86B255292291715800895B29 /* Subcategory.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Subcategory.storyboard; sourceTree = "<group>"; };
 		86D85D8E2277569000ACC476 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		CA19BB1F514E28C917FEC308 /* Pods_itea_ios_products_magazine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_itea_ios_products_magazine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA8920B4B2A565131614A6C7 /* Pods-itea-ios-products-magazine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-itea-ios-products-magazine.debug.xcconfig"; path = "Target Support Files/Pods-itea-ios-products-magazine/Pods-itea-ios-products-magazine.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,7 +137,9 @@
 		8645A800226E5CFA00BCF038 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				86B255292291715800895B29 /* Subcategory.storyboard */,
 				86B2550A228C7A4700895B29 /* Shops.storyboard */,
+				86B2551D228C894D00895B29 /* Category.storyboard */,
 				8645A801226E5D1400BCF038 /* Login.storyboard */,
 			);
 			path = Storyboards;
@@ -124,6 +148,8 @@
 		8645A803226E5D1D00BCF038 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				86B2551F2291712700895B29 /* TableViewController.swift */,
+				86B25515228C88B600895B29 /* CategoryController.swift */,
 				86B2550C228C7A4F00895B29 /* ShopsViewController.swift */,
 				8645A805226E5D4900BCF038 /* LoginViewController.swift */,
 				86D85D8E2277569000ACC476 /* RegisterViewController.swift */,
@@ -134,6 +160,7 @@
 		8645A804226E5D2700BCF038 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				86B255272291714F00895B29 /* SubcategoryList.swift */,
 				8645A807226E5D6D00BCF038 /* UsersDictModel.swift */,
 				8645A811226F06B400BCF038 /* UserInfoModel.swift */,
 				86B2550E228C7A6500895B29 /* ShopsType.swift */,
@@ -144,6 +171,8 @@
 		8645A809226EE7EE00BCF038 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				86B255252291714600895B29 /* SubcategoryManager.swift */,
+				86B2551B228C88E400895B29 /* ItemsList.swift */,
 				8645A80A226EE80600BCF038 /* LoginsDictManager.swift */,
 			);
 			path = Managers;
@@ -162,6 +191,10 @@
 			children = (
 				86B25511228C7AF800895B29 /* ListShopsCell.swift */,
 				86B25512228C7AF800895B29 /* ListShopsCell.xib */,
+				86B25518228C88D400895B29 /* ListCell.swift */,
+				86B25517228C88D400895B29 /* ListCell.xib */,
+				86B255212291713D00895B29 /* TableViewCell.swift */,
+				86B255222291713D00895B29 /* TableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -227,10 +260,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				86B25514228C7AF800895B29 /* ListShopsCell.xib in Resources */,
+				86B25519228C88D400895B29 /* ListCell.xib in Resources */,
 				86B2550B228C7A4700895B29 /* Shops.storyboard in Resources */,
+				86B2551E228C894D00895B29 /* Category.storyboard in Resources */,
 				8645A7F7226E497F00BCF038 /* LaunchScreen.storyboard in Resources */,
+				86B255242291713D00895B29 /* TableViewCell.xib in Resources */,
 				8645A7F4226E497F00BCF038 /* Assets.xcassets in Resources */,
 				8645A802226E5D1400BCF038 /* Login.storyboard in Resources */,
+				86B2552A2291715800895B29 /* Subcategory.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,14 +325,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86B255232291713D00895B29 /* TableViewCell.swift in Sources */,
 				86B2550D228C7A4F00895B29 /* ShopsViewController.swift in Sources */,
+				86B255202291712700895B29 /* TableViewController.swift in Sources */,
 				86B2550F228C7A6500895B29 /* ShopsType.swift in Sources */,
 				8645A806226E5D4900BCF038 /* LoginViewController.swift in Sources */,
 				8645A81D226F13EC00BCF038 /* LaunchView.swift in Sources */,
+				86B255282291714F00895B29 /* SubcategoryList.swift in Sources */,
+				86B255262291714700895B29 /* SubcategoryManager.swift in Sources */,
 				86D85D8F2277569000ACC476 /* RegisterViewController.swift in Sources */,
+				86B25516228C88B600895B29 /* CategoryController.swift in Sources */,
 				8645A80B226EE80600BCF038 /* LoginsDictManager.swift in Sources */,
 				8645A7ED226E497D00BCF038 /* AppDelegate.swift in Sources */,
+				86B2551C228C88E400895B29 /* ItemsList.swift in Sources */,
 				8645A808226E5D6D00BCF038 /* UsersDictModel.swift in Sources */,
+				86B2551A228C88D400895B29 /* ListCell.swift in Sources */,
 				8645A812226F06B400BCF038 /* UserInfoModel.swift in Sources */,
 				86B25513228C7AF800895B29 /* ListShopsCell.swift in Sources */,
 			);

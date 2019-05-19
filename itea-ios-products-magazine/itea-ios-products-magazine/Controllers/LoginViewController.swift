@@ -114,7 +114,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             let vc = storyboard.instantiateViewController(withIdentifier: "ShopsViewController") as! ShopsViewController
             vc.avatarUser = userInfo?.userFoto
             vc.nameUser = userInfo!.username
-            navigationController?.present(vc, animated: true, completion: nil)
+            navigationController?.pushViewController(vc, animated: true) //present(vc, animated: true, completion: nil)
         }
         else {
             Alert(errorCode: 4)
